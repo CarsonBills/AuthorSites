@@ -6,17 +6,22 @@ const Main = React.createClass({
         return (
             <div>
                 <div className="Nav">
-                    <div>
+                    <div style={{'display': "inline-block", width: "80%", background: 'lightgrey'}}>
                         <ul>
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to="/books">Books</Link></li>
-                            <li><Link to="/events">Events</Link></li>
-                            <li><Link to="/videos">Videos</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li style={{'display':'inline-block'}}><Link to='/about'>About</Link></li>
+                            <li style={{'display':'inline-block'}}><Link to="/books">Books</Link></li>
+                            <li style={{'display':'inline-block'}}><Link to="/events">Events</Link></li>
+                            <li style={{'display':'inline-block'}}><Link to="/videos">Videos</Link></li>
+                            <li style={{'display':'inline-block'}}><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>
-                    <div>
-                        Social Links
+                    <div style={{'display': "inline-block", width: "20%", background: 'grey'}}>
+                        <ul>
+                            <li style={{'display':'inline-block'}}><Link style={{'color':'navy'}} target="_blank" to="https://www.youtube.com/"><i className="fa fa-youtube-play" ></i></Link></li>
+                            <li style={{'display':'inline-block'}}><Link style={{'color':'navy'}} target="_blank" to="https://www.instagram.com/"><i className="fa fa-instagram" ></i></Link></li>
+                            <li style={{'display':'inline-block'}}><Link style={{'color':'navy'}} target="_blank" to="https://www.twitter.com/"><i className="fa fa-twitter" ></i></Link></li>
+                            <li style={{'display':'inline-block'}}><Link style={{'color':'navy'}} target="_blank" to="https://www.facebook.com/"><i className="fa fa-facebook-official" ></i></Link></li>
+                        </ul>
                     </div>
                 </div>
                 {React.cloneElement(this.props.children, this.props)}
