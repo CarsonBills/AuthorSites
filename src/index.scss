@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,700');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #141519;
+  color: white;
+}
+
+.button {
+    text-align: center;
+    font-size: 16px;
+    width: 177px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50px;
+    background-color: #41AC9B;
+    color: white;
+}
+
+h2 {
+    font-family: 'Josefin Slab', serif;
+    margin-top: 0px;
+    margin-bottom: 18px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: .05em;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-grey {
+    background-color: #202127;
+}
+
+.top-bar {
+    background-color: #141519;
+    font-family: 'Josefin Slab', serif;
+    .nav{    
+        padding-top: 30px;
+        padding-bottom: 40px;
+        ul {
+            margin-bottom: 0px;
+        }
+        a {
+            margin-left: 25px;
+            margin-right: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            .home {
+                font-size: 20px;
+            }
+            .red {
+                color: #F84338;
+            }
+        }
+    }
+    .social {
+        padding-top: 25px;
+        text-align: right;
+        p {
+            font-family: 'Josefin Slab', serif;
+        }
+        li {
+            display: inline-block;
+            a {    
+                margin-top: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 18px; 
+                .fa-youtube-play {
+                    color: #E31A0D;
+                }
+                .fa-instagram {
+                    color: #762f7c;
+                }
+                .fa-twitter{
+                    color: #6c9adc;
+                }
+                .fa-facebook-official{
+                    color: #3f4e83;
+                }
+            }
+        }
+    }
+
+}
+
+
+.page-title {
+    max-height: 277px;
+    text-align: center;
+    padding-top: 100px;
+    p {
+        display: inline-block;
+        &.overline {
+            margin-top: 100px;
+        }
+        &.underline {
+            margin-bottom: 100px;
+            border-bottom: solid 7px #f84338;
+            width: 83px;
+            height: 12px;
+        }
+    }
+}
+
+.section-title {
+    text-align: center;
+    p {
+        display: inline-block;
+        &.overline {
+        }
+        &.underline {
+            border-bottom: solid 7px #f84338;
+            width: 83px;
+            height: 12px;
+        }
+    }
+}
+
+.page-content {
+    .event {
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #494D5A;
+        font-family: "Poppins", sans-serif;
+        > div {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            span {
+                font-size: 18px;
+                letter-spacing: .05em; 
+            }
+        }
+
+        .fa-calendar {
+            font-size: 17px;
+            margin-right: 15px;
+        }
+        .details {
+            color: #41AC9B;
+        }
+    }
+    .book-list {
+        >div >div{
+            top: -20px;
+        }
+        >div:nth-child(odd) >div{
+            text-align: right;
+            padding-right: 70px;
+        }
+        >div:nth-child(even) >div{
+            text-align: left;
+            padding-left: 70px;
+        }
+        .book {
+            p {
+                font-family: 'Josefin Slab', serif;
+                margin-top: 40px;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 30px;
+            }
+        }
+    }
+    .detail-data {
+        background-color: #202127;
+        padding-top: 100px;
+        .detail-title-description{
+            padding-left: 50px;
+        }
+
+        .section-title {
+            text-align: left;
+        }
+        .book {
+            text-align: center;
+            padding-right: 50px;
+
+            .button {
+                margin: 50px auto 50px auto;
+            }
+        }
+
+        .detail-description {
+            line-height: 50px;
+            font-size: 18px;
+            color: #e0e0e0;
+            width:540px;
+            margin-bottom: 90px;
+        }
+    }
+    .detail-reviews{
+        .section-title {
+            margin-top: 100px;
+            margin-bottom: 5px;
+        }
+        .reviews-grid {
+            color: #95989A;
+            .review{
+                text-align: center;
+                margin: 70px auto;
+                font-size: 20px;
+                width: 462px;
+                .review-text {
+                    
+                    padding-bottom: 30px;
+                    font-size: 18px;
+                    margin-right: 0;
+                }
+                .review-author {
+                    border-top: solid 1px #95989A;
+                    display: inline-block;
+                    padding-top: 30px;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.video-list {
+    background-color: #202127;
+    .video {
+        img {
+            width: 373px;
+            height: 230px;
+        }
+    }
+}
+        .fa-times {
+            display:none;
+        }
+
+    #modal{
+        .fa-times {
+            display: inline-block;
+            position: absolute;
+            top: -50px;
+        }
+    }
+
+
+
+
+// Caitlyn Doughty CSS
+
+
+p.overline{
+    display: none;
+}

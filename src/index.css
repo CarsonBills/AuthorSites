@@ -1,5 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:400,700");
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
+  background-color: #141519;
+  color: white; }
+
+.button {
+  text-align: center;
+  font-size: 16px;
+  width: 177px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50px;
+  background-color: #41AC9B;
+  color: white; }
+
+h2 {
+  font-family: 'Josefin Slab', serif;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: .05em; }
+
+p {
+  font-family: 'Poppins', sans-serif; }
+
+.bg-grey {
+  background-color: #202127; }
+
+.top-bar {
+  background-color: #141519;
+  font-family: 'Josefin Slab', serif; }
+
+.top-bar .nav {
+  padding-top: 30px;
+  padding-bottom: 40px; }
+
+.top-bar .nav ul {
+  margin-bottom: 0px; }
+
+.top-bar .nav a {
+  margin-left: 25px;
+  margin-right: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; }
+
+.top-bar .nav a .home {
+  font-size: 20px; }
+
+.top-bar .nav a .red {
+  color: #F84338; }
+
+.top-bar .social {
+  padding-top: 25px;
+  text-align: right; }
+
+.top-bar .social p {
+  font-family: 'Josefin Slab', serif; }
+
+.top-bar .social li {
+  display: inline-block; }
+
+.top-bar .social li a {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px; }
+
+.top-bar .social li a .fa-youtube-play {
+  color: #E31A0D; }
+
+.top-bar .social li a .fa-instagram {
+  color: #762f7c; }
+
+.top-bar .social li a .fa-twitter {
+  color: #6c9adc; }
+
+.top-bar .social li a .fa-facebook-official {
+  color: #3f4e83; }
+
+.page-title {
+  max-height: 277px;
+  text-align: center;
+  padding-top: 100px; }
+
+.page-title p {
+  display: inline-block; }
+
+.page-title p.overline {
+  margin-top: 100px; }
+
+.page-title p.underline {
+  margin-bottom: 100px;
+  border-bottom: solid 7px #f84338;
+  width: 83px;
+  height: 12px; }
+
+.section-title {
+  text-align: center; }
+
+.section-title p {
+  display: inline-block; }
+
+.section-title p.underline {
+  border-bottom: solid 7px #f84338;
+  width: 83px;
+  height: 12px; }
+
+.page-content .event {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #494D5A;
+  font-family: "Poppins", sans-serif; }
+
+.page-content .event > div {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.page-content .event > div span {
+  font-size: 18px;
+  letter-spacing: .05em; }
+
+.page-content .event .fa-calendar {
+  font-size: 17px;
+  margin-right: 15px; }
+
+.page-content .event .details {
+  color: #41AC9B; }
+
+.page-content .book-list > div > div {
+  top: -20px; }
+
+.page-content .book-list > div:nth-child(odd) > div {
+  text-align: right;
+  padding-right: 70px; }
+
+.page-content .book-list > div:nth-child(even) > div {
+  text-align: left;
+  padding-left: 70px; }
+
+.page-content .book-list .book p {
+  font-family: 'Josefin Slab', serif;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px; }
+
+.page-content .detail-data {
+  background-color: #202127;
+  padding-top: 100px; }
+
+.page-content .detail-data .detail-title-description {
+  padding-left: 50px; }
+
+.page-content .detail-data .section-title {
+  text-align: left; }
+
+.page-content .detail-data .book {
+  text-align: center;
+  padding-right: 50px; }
+
+.page-content .detail-data .book .button {
+  margin: 50px auto 50px auto; }
+
+.page-content .detail-data .detail-description {
+  line-height: 50px;
+  font-size: 18px;
+  color: #e0e0e0;
+  width: 540px;
+  margin-bottom: 90px; }
+
+.page-content .detail-reviews .section-title {
+  margin-top: 100px;
+  margin-bottom: 5px; }
+
+.page-content .detail-reviews .reviews-grid {
+  color: #95989A; }
+
+.page-content .detail-reviews .reviews-grid .review {
+  text-align: center;
+  margin: 70px auto;
+  font-size: 20px;
+  width: 462px; }
+
+.page-content .detail-reviews .reviews-grid .review .review-text {
+  padding-bottom: 30px;
+  font-size: 18px;
+  margin-right: 0; }
+
+.page-content .detail-reviews .reviews-grid .review .review-author {
+  border-top: solid 1px #95989A;
+  display: inline-block;
+  padding-top: 30px;
+  color: #fff;
+  font-weight: bold; }
+
+.video-list {
+  background-color: #202127; }
+
+.video-list .video img {
+  width: 373px;
+  height: 230px; }
+
+.fa-times {
+  display: none; }
+
+#modal .fa-times {
+  display: inline-block;
+  position: absolute;
+  top: -50px; }
+
+p.overline {
+  display: none; }
