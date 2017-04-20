@@ -9,8 +9,8 @@ const Books = React.createClass({
                 <Grid>
                     <Row className="show-grid">
                         <div className="book-list">
-                            <BookCover title="From Here to Eternity" link="/from_here_to_eternity"/>
-                            <BookCover title="Smoke Gets In Your Eyes" link="/smoke_gets_in_your_eyes"/>
+                            <BookCover title="From Here to Eternity" link="/books/from-here-to-eternity"/>
+                            <BookCover title="Smoke Gets In Your Eyes" link="/books/smoke-gets-in-your-eyes"/>
                         </div>
                     </Row>
                 </Grid>

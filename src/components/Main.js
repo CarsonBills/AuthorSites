@@ -25,10 +25,10 @@ const Main = React.createClass({
                                 <div className="social">
                                     <p>Follow Caitlyn Doughty</p>
                                     <ul>
-                                        <li style={{'display':'inline'}}><Link target="_blank" to="https://www.youtube.com/"><i className="fa fa-youtube-play" ></i></Link></li>
-                                        <li style={{'display':'inline'}}><Link target="_blank" to="https://www.instagram.com/"><i className="fa fa-instagram" ></i></Link></li>
-                                        <li style={{'display':'inline'}}><Link target="_blank" to="https://www.twitter.com/"><i className="fa fa-twitter" ></i></Link></li>
-                                        <li style={{'display':'inline'}}><Link target="_blank" to="https://www.facebook.com/"><i className="fa fa-facebook-official" ></i></Link></li>
+                                        <li><Link target="_blank" to="https://www.youtube.com/"><i className="fa fa-youtube-play" ></i></Link></li>
+                                        <li><Link target="_blank" to="https://www.instagram.com/"><i className="fa fa-instagram" ></i></Link></li>
+                                        <li><Link target="_blank" to="https://www.twitter.com/"><i className="fa fa-twitter" ></i></Link></li>
+                                        <li><Link target="_blank" to="https://www.facebook.com/"><i className="fa fa-facebook-official" ></i></Link></li>
                                     </ul>
                                 </div>
                             </Col>

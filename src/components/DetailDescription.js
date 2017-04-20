@@ -7,16 +7,7 @@ const DetailDescription = React.createClass({
         return (
             <div className="detail-description" >
                 <p>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
-                    Fascinared by our pervasive terror of dead bodies.<br/>
+                    {this.props.description}
                 </p>
             </div>
         )

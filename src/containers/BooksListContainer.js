@@ -2,7 +2,7 @@ import React from 'react';
 import Books from '../components/Books';
 import SectionTitle from '../components/SectionTitle';
 
-const BooksContainer = React.createClass({
+const BooksListContainer = React.createClass({
     render(){
         return (
             <div>
@@ -17,4 +17,4 @@ const BooksContainer = React.createClass({
     }
 });
 
-export default BooksContainer;
+export default BooksListContainer;

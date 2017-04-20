@@ -14,13 +14,13 @@ const Details = React.createClass({
                     <Grid>
                         <Row className="show-grid ">
                             <div>
-                                <BookCover buttonText="Buy Now" link="/from_here_to_eternity" />
+                                <BookCover buttonText="Buy Now" link="/from-here-to-eternity" />
                                 <Col xs={12} md={6}>
                                     <div className="detail-title-description">
                                         <div className="section-title"> 
-                                            <SectionTitle title="From Here to Eternity" subtitle="Traveling the World to Find the Good Death"/>
+                                            <SectionTitle title={this.props.book.title} subtitle={this.props.book.subtitle}/>
                                         </div>
-                                        <DetailDescription />
+                                        <DetailDescription description={this.props.book.description}/>
                                     </div>
                                 </Col>
                             </div>
@@ -33,7 +33,7 @@ const Details = React.createClass({
                             <div className="section-title"> 
                                 <SectionTitle title="Endorsements & Reviews"/>
                             </div>
-                                <Reviews />
+                                
                         </Row>
                     </Grid>
                 </div>

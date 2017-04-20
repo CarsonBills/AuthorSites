@@ -1,19 +1,21 @@
 import React from 'react';
-import BooksContainer from './BooksContainer';
-import AboutContainer from './AboutContainer';
+import BooksHomeContainer from './BooksHomeContainer';
+import AboutHomeContainer from './AboutHomeContainer';
 import EventsContainer from './EventsContainer';
 import VideosContainer from './VideosContainer';
-import ContactContainer from './ContactContainer';
+import ContactHomeContainer from './ContactHomeContainer';
+import Carousel from "../components/Carousel";
 
 const Home = React.createClass({
     render(){
         return (
             <div>
-                <AboutContainer />
-                <BooksContainer />
+                <Carousel />
+                <AboutHomeContainer />
+                <BooksHomeContainer />
                 <EventsContainer />
                 <VideosContainer />
-                <ContactContainer />
+                <ContactHomeContainer />
             </div>
         )
     }

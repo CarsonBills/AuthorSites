@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import Main from './components/Main';
+import App from './components/App';
 import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
-import BooksContainer from './containers/BooksContainer';
+import BooksListContainer from './containers/BooksListContainer';
 import EventsContainer from './containers/EventsContainer';
 import VideosContainer from './containers/VideosContainer';
 import ContactContainer from './containers/ContactContainer';
 import DetailContainer from './containers/DetailContainer';
 
 import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { Provider } from 'react-redux';
 
+import store, { history } from './store';
 
 var ReactGA = require('react-ga');
 ReactGA.initialize('UA-66576513-2');
@@ -25,18 +27,19 @@ function logPageView() {
 import './index.css';
 
 const router = (
-    <Router history={browserHistory} onUpdate={logPageView}>
-        <Route path="/" component={Main}>
+  <Provider store={store}>
+    <Router history={history} onUpdate={logPageView}>
+        <Route path="/" component={App}>
             <IndexRoute component={HomeContainer}></IndexRoute>
             <Route path="/about" component={AboutContainer}></Route>
-            <Route path="/books" component={BooksContainer}></Route>
+            <Route path="/books" component={BooksListContainer}></Route>
             <Route path="/events" component={EventsContainer}></Route>
             <Route path="/videos" component={VideosContainer}></Route>
             <Route path="/contact" component={ContactContainer}></Route>
-            <Route path="/from_here_to_eternity" component={DetailContainer}></Route>
-            <Route path="/smoke_gets_in_your_eyes" component={DetailContainer}></Route>
+            <Route path="/books/:id" component={DetailContainer}></Route>
         </Route>
     </Router>
+  </Provider>
 )
 
 ReactDOM.render(

@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
+import Button from '../components/Button';
 import Video from "../components/Video";
 import { Grid, Row, Col } from 'react-bootstrap';
 
@@ -23,6 +24,7 @@ const Videos = React.createClass({
                         </Row>
                     </Grid>
                 </div>
+                    <Button link="#" text="See All Videos" type="see-all"/>
             </div>
         )
     }

@@ -6,8 +6,12 @@ const AboutContainer = React.createClass({
     render(){
         return (
             <div>
-                <SectionTitle title="About"/>
-                <About />
+                <div className="page-title bg-grey">
+                    <SectionTitle title="About Caitlin Doughty"/>
+                </div>
+                <div className="page-content">
+                    <About />
+                </div>
             </div>
 
         )

@@ -1,13 +1,16 @@
 import React from 'react';
+import { Col } from 'react-bootstrap';
 
 const Contact = React.createClass({
     render(){
         return (
-            <div>
-                <div className="section5" style={{height: '100px', width: "100%", background: 'lightpink'}}>
-                    Contact
+            <Col xs={12} md={4} >
+                <div className="contact">
+                    <h3 className="title">{this.props.title}</h3>
+                    <p className="name">{this.props.name}</p>
+                    <p className="email">{this.props.email}</p>
                 </div>
-            </div>
+            </Col>
         )
     }
 });

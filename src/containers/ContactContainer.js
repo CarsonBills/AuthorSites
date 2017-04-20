@@ -1,16 +1,20 @@
 import React from 'react';
-import Contact from '../components/Contact';
+import ContactsPage from '../components/ContactsPage';
 import SectionTitle from '../components/SectionTitle';
 
-const ContactContainer = React.createClass({
+const ContactPageContainer = React.createClass({
     render(){
         return (
             <div>
-                <SectionTitle title="Contact"/>
-                <Contact />
+                <div className="page-title bg-grey">
+                    <SectionTitle title="Contact"/>
+                </div>
+                <div className="page-content">
+                    <ContactsPage />
+                </div>
             </div>
         )
     }
 });
 
-export default ContactContainer;
+export default ContactPageContainer;
