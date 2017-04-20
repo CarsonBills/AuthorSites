@@ -11,9 +11,9 @@ const Subscribe = React.createClass({
                 <FormGroup>
                   <p>{this.props.title}</p>
                   <InputGroup>
-                    <FormControl type="text" placeholder="Enter Your Email Address" />
+                    <FormControl type="text" placeholder={this.props.placeholder} />
                     <InputGroup.Button>
-                      <div className="button" >Sign Up</div>
+                      <div className="button" >{this.props.buttonText}</div>
                     </InputGroup.Button>
                   </InputGroup>
                 </FormGroup>
@@ -22,9 +22,9 @@ const Subscribe = React.createClass({
             form = (
                 <FormGroup>
                   <InputGroup>
-                    <FormControl type="text" placeholder="Enter Your Email Address" />
+                    <FormControl type="text" placeholder={this.props.placeholder} />
                     <InputGroup.Button>
-                      <div className="button" >Sign Up</div>
+                      <div className="button" >{this.props.buttonText}</div>
                     </InputGroup.Button>
                   </InputGroup>
                 </FormGroup>

@@ -2,7 +2,7 @@ const books = [
     {   
         "id": 0,
         "isbn": "1234567891011",
-        "url":"from-here-to-eternity",
+        "url":"/books/from-here-to-eternity",
         "bookTitle":"From Here to Eternity",
         "subtitle":"Traveling the World to Find The Good Death",
         "coverImage" : "Iamge URL",
@@ -48,7 +48,7 @@ const books = [
     {   
         "id": 1,
         "isbn": "1234567891011",
-        "url":"smoke-gets-in-your-eyes",
+        "url":"/books/smoke-gets-in-your-eyes",
         "bookTitle":"Smoke Gets In Your Eyes",
         "subtitle":"Traveling the World to Find The Good Death",
         "coverImage" : "Iamge URL",

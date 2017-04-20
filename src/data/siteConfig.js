@@ -1,7 +1,7 @@
 const siteConfig = {
     "authorName":"Caitlin Doughty",
     "social" : [
-      "socialLinksTitle": "Follow Caitlin Doughty"
+      "socialLinksTitle": "Follow Caitlin Doughty",
       {
         "name": "instagram",
         "link": "www.instagram.com"

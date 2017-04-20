@@ -12,13 +12,13 @@ const About = React.createClass({
                         <div>
                             <Col xs={12} md={6}>
                                 <div >
-                                    <img src="http://placehold.it/480x480"/>
+                                    <img src={this.props.about.authorImageURL}/>
                                 </div>
                             </Col>
                             <Col xs={12} md={6}>
                                 <div>
-                                    <AboutDescription />
-                                    <Subscribe title="Sign Up for Newsletter"/>
+                                    <AboutDescription text={this.props.about.description} />
+                                    <Subscribe title={this.props.about.newsletter.signUpTitleText} buttonText={this.props.about.newsletter.signUpButtonText} placeholder={this.props.about.newsletter.signUpPlaceholder}/>
                                 </div>
                             </Col>
                         </div>
