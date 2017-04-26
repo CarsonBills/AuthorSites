@@ -1,10 +1,9 @@
 import { bindActionCreators }from 'redux';
 import { connect } from 'react-redux';
-
+import * as actionCreators from "../actions/actionCreators";
 import Main from "./Main";
 
 function mapStateToProps(state){
-    console.log("State", state)
     return {
         books: state.books,
         articles: state.articles,
@@ -13,12 +12,17 @@ function mapStateToProps(state){
         events: state.events,
         home: state.home,
         siteConfig: state.siteConfig,
-        videos: state.videos
+        videos: state.videos,
+        youtube: state.youtube,
+        instagram: state.instagram
     }
 }
 
+function mapDispatchToProps(dispatch){
+    return bindActionCreators(actionCreators, dispatch);
+}
 
 
-const App = connect(mapStateToProps)(Main);
+const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 export default App;

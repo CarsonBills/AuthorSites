@@ -7,7 +7,7 @@ const ContactContainer = React.createClass({
         return (
             <div>
                 <div className="page-content">
-                    <ContactsHome />
+                    <ContactsHome {...this.props}/>
                 </div>
             </div>
         )

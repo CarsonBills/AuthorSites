@@ -7,7 +7,7 @@ const AboutHomeContainer = React.createClass({
         return (
             <div>
                 <div className="page-content">
-                    <AboutHome/>
+                    <AboutHome {...this.props} />
                 </div>
             </div>
 

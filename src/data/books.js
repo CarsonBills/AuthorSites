@@ -2,7 +2,7 @@ const books = [
     {   
         "id": 0,
         "isbn": "1234567891011",
-        "url":"/books/from-here-to-eternity",
+        "url":"from-here-to-eternity",
         "bookTitle":"From Here to Eternity",
         "subtitle":"Traveling the World to Find The Good Death",
         "coverImage" : "Iamge URL",
@@ -25,30 +25,32 @@ const books = [
              "link": "URL"
             },
         ],
-        "reviews" : [
+        "reviewSection" : {
             "showReviews": true,
             "sectionTitle" : "Reviews & Endorsements",
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            },
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            },
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            }
-        ],
+            "reviews" : [
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                },
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                },
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                }
+            ]
+        },
     },
     {   
         "id": 1,
         "isbn": "1234567891011",
-        "url":"/books/smoke-gets-in-your-eyes",
+        "url":"smoke-gets-in-your-eyes",
         "bookTitle":"Smoke Gets In Your Eyes",
         "subtitle":"Traveling the World to Find The Good Death",
         "coverImage" : "Iamge URL",

@@ -10,12 +10,12 @@ const Home = React.createClass({
     render(){
         return (
             <div>
-                <Carousel />
-                <AboutHomeContainer />
-                <BooksHomeContainer />
-                <EventsContainer />
-                <VideosContainer />
-                <ContactHomeContainer />
+                <Carousel {...this.props} />
+                <AboutHomeContainer {...this.props} />
+                <BooksHomeContainer {...this.props} />
+                <EventsContainer {...this.props} />
+                <VideosContainer {...this.props} numberOfVideos="6" />
+                <ContactHomeContainer {...this.props} />
             </div>
         )
     }

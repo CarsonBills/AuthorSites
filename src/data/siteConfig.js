@@ -1,30 +1,37 @@
 const siteConfig = {
     "authorName":"Caitlin Doughty",
-    "social" : [
+    "social" : {
       "socialLinksTitle": "Follow Caitlin Doughty",
-      {
-        "name": "instagram",
-        "link": "www.instagram.com"
-      },
-      {
-        "name": "facebook",
-        "link": "www.facebook.com"
-      },
-      {
-        "name": "youtube",
-        "link": "www.youutube.com"
-      },
-      {
-        "name": "twitter",
-        "link": "www.twitter.com"
-      },
-    ],
-    "header" : [
-      {
-        "title" : "Word to Display in Nav",
-        "type" : "Type of page to render (About, Books, Events etc.)"
-      }
-    ],
+      "links": [
+        {
+          "icon": "fa fa-instagram",
+          "link": "https://www.instagram.com/"
+        },
+        {
+          "icon": "fa fa-facebook-official",
+          "link": "https://www.facebook.com/"
+        },
+        {
+          "icon": "fa fa-youtube-play",
+          "link": "https://www.youtube.com/"
+        },
+        {
+          "icon": "fa fa-twitter",
+          "link": "https://www.twitter.com/"
+        }
+      ]
+    },
+    "header" : {
+      "titleFirst" : "CAITLIN",
+      "titleSecond": "DOUGHTY",
+      "type" : [
+        "About",
+        "Books",
+        "Events",
+        "Videos",
+        "Contact"
+      ]
+    },
     "stylesheet": "url to stylesheet",
     "showFooter": true,
     "footerContent":[

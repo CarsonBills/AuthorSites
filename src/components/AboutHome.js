@@ -13,27 +13,22 @@ const About = React.createClass({
                         <div>
                             <Col xs={12} md={6}>
                                 <div>
-                                    <img src="http://placehold.it/480x480"/>
+                                    <img src={this.props.about.authorImageURL}/>
                                 </div>
                             </Col>
                             <Col xs={12} md={6}>
                                 <div>
                                     <div className="section-title"> 
-                                        <SectionTitle title="About Caitlin Doughty"/>
+                                        <SectionTitle title={this.props.about.pageTitle}/>
                                     </div>
                                     <TextTruncate 
                                         className="about-description"
                                         line={3}
                                         truncateText="…"
-                                        text=" Mortician Caitlin Doughty--host and creator of Ask
-                                            a Mortician and the New York Times best-selling 
-                                            author if Smoke Gets in Your Eyes - founded The 
-                                            Order of the Good Death. She lives in Los Angeles. 
-                                            where she runs her nonprofit funeral home. 
-                                            Undertaking L.A."
-                                        textTruncateChild={<a href="#">Read more</a>}
+                                        text= {this.props.about.description}
+                                        textTruncateChild={<a href={this.props.about.link}>Read more</a>}
                                     />
-                                    <Subscribe title="Sign Up for Newsletter"/>
+                                    <Subscribe title="true" {...this.props}/>
                                 </div>
                             </Col>
                         </div>

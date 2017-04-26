@@ -9,7 +9,9 @@ import events from "./events";
 import home from "./home";
 import siteConfig from "./siteConfig";
 import videos from "./videos";
+import instagram from "./instagram";
+import youtube from "./youtube";
 
-const rootReducer = combineReducers({books, about, articles, contact, events, home, siteConfig, videos, routing: routerReducer});
+const rootReducer = combineReducers({books, about, articles, contact, events, home, siteConfig, videos, instagram, youtube, routing: routerReducer});
 
 export default rootReducer;

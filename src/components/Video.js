@@ -55,22 +55,21 @@ class Video extends React.Component{
         this.setState({modalIsOpen: false});
     }
 
-
-
-
     render(){
+        const thumbnail = "https://img.youtube.com/vi/"+this.props.video.id.videoId+"/0.jpg";
+        const src = 'https://www.youtube.com/embed/' + this.props.video.id.videoId;
         return (
             <Col xs={12} md={4} >
                 <div className="video">
-                    <img class="video-thumb" onClick={this.openModal} src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg"/>
-                    <p>{this.props.title}</p>
+                    <img className="video-thumb" onClick={this.openModal} src={thumbnail}/>
+                    <p>{this.props.video.snippet.title}</p>
                     <Modal
                       isOpen={this.state.modalIsOpen}
                       onAfterOpen={this.afterOpenModal}
                       onRequestClose={this.closeModal}
                       style={customStyles}
                       contentLabel="Example Modal">
-                      <iframe onClick={this.openModal} width="700" height="510" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                      <iframe onClick={this.openModal} width="700" height="510" src={src} frameborder="0" allowfullscreen></iframe>
                     </Modal>
                 </div>
             </Col>

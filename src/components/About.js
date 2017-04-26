@@ -18,7 +18,7 @@ const About = React.createClass({
                             <Col xs={12} md={6}>
                                 <div>
                                     <AboutDescription text={this.props.about.description} />
-                                    <Subscribe title={this.props.about.newsletter.signUpTitleText} buttonText={this.props.about.newsletter.signUpButtonText} placeholder={this.props.about.newsletter.signUpPlaceholder}/>
+                                    <Subscribe {...this.props}/>
                                 </div>
                             </Col>
                         </div>

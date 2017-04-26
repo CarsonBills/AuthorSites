@@ -7,13 +7,10 @@ const EventsContainer = React.createClass({
         return (
             <div>
                 <div className="page-title">
-                    <SectionTitle title="Events" />
+                    <SectionTitle title={this.props.events.pageTitle} />
                 </div>
                 <div className="page-content">
-                    <Event date="Mar 12" location="New York City" eventType="Book Signing" />
-                    <Event date="Mar 12" location="New York City" eventType="Book Signing"/>
-                    <Event date="Mar 12" location="New York City" eventType="Book Signing"/>
-                    <Event date="Mar 12" location="New York City" eventType="Book Signing"/>
+                    {this.props.events.sections.map((event, i) => <Event {...this.props.events} key={i} i={i} event={event} />)}
                 </div>
             </div>
         )

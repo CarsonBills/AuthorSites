@@ -9,11 +9,11 @@ const Subscribe = React.createClass({
         if (this.props.title){
             form = (
                 <FormGroup>
-                  <p>{this.props.title}</p>
+                  <p>{this.props.about.newsletter.signUpTitleText}</p>
                   <InputGroup>
-                    <FormControl type="text" placeholder={this.props.placeholder} />
+                    <FormControl type="text" placeholder={this.props.about.newsletter.signUpPlaceholder} />
                     <InputGroup.Button>
-                      <div className="button" >{this.props.buttonText}</div>
+                      <div className="button" >{this.props.about.newsletter.signUpButtonText}</div>
                     </InputGroup.Button>
                   </InputGroup>
                 </FormGroup>
@@ -22,9 +22,9 @@ const Subscribe = React.createClass({
             form = (
                 <FormGroup>
                   <InputGroup>
-                    <FormControl type="text" placeholder={this.props.placeholder} />
+                    <FormControl type="text" placeholder={this.props.about.newsletter.signUpPlaceholder} />
                     <InputGroup.Button>
-                      <div className="button" >{this.props.buttonText}</div>
+                      <div className="button" >{this.props.about.newsletter.signUpButtonText}</div>
                     </InputGroup.Button>
                   </InputGroup>
                 </FormGroup>

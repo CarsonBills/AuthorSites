@@ -12,7 +12,7 @@ const events = {
       },
       {
         "date": "01/02/2018",
-        "city": "Toronto",
+        "city": "New York City",
         "location": "Barnes and Noble",
         "detailsLabel": "Details/Tickets",
         "detailsLink": "www.example.com",
@@ -21,7 +21,7 @@ const events = {
       },
       {
         "date": "01/02/2018",
-        "city": "Toronto",
+        "city": "Boston",
         "location": "Barnes and Noble",
         "detailsLabel": "Details/Tickets",
         "detailsLink": "www.example.com",

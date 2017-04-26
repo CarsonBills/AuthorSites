@@ -1,6 +1,7 @@
-import {createStore, comps} from 'redux';
+import {createStore, comps, applyMiddleware} from 'redux';
 import {syncHistoryWithStore} from 'react-router-redux';
 import {browserHistory} from "react-router";
+import ReduxPromise from "redux-promise";
 
 // import root reducer
 import rootReducer from './reducers/index';
@@ -28,7 +29,11 @@ const defaultState = {
     videos
 }
 
-const store = createStore(rootReducer, defaultState);
+const store = createStore(
+    rootReducer,
+    defaultState,
+    applyMiddleware(ReduxPromise)
+);
 
 
 export const history = syncHistoryWithStore(browserHistory, store);

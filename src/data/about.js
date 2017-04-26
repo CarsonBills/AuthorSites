@@ -7,6 +7,7 @@ const about = {
       "signUpButtonText": "Sign Up",
       "signUpPlaceholder": "Enter your Email Address"
     },
+    "link": "/about",
     "CampaignMonitorID": "Test1234",
     "authorImageURL":"http://placehold.it/480x480"
 };

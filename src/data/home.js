@@ -12,6 +12,10 @@ const home = {
     "photosSubTitle": "Follow Caitlin on Instagram",
     "photosource": "instagram",
     "photoSourceURL" : "www.instagram.com"
+  },
+  "subscribe" : {
+    "sectionTitle": "Subscribe",
+    "subtitle": "You'll recieve occasional updates on books, articles, and tour dates"
   }
 }; 
 

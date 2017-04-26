@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/App';
 import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
+import ArticlesContainer from './containers/ArticlesContainer';
 import BooksListContainer from './containers/BooksListContainer';
 import EventsContainer from './containers/EventsContainer';
 import VideosContainer from './containers/VideosContainer';
@@ -32,6 +33,7 @@ const router = (
         <Route path="/" component={App}>
             <IndexRoute component={HomeContainer}></IndexRoute>
             <Route path="/about" component={AboutContainer}></Route>
+            <Route path="/articles" component={ArticlesContainer}></Route>
             <Route path="/books" component={BooksListContainer}></Route>
             <Route path="/events" component={EventsContainer}></Route>
             <Route path="/videos" component={VideosContainer}></Route>

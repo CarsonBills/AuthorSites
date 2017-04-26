@@ -1,17 +1,17 @@
 import React from 'react';
-import {gaClick} from '../components/gaClick';
+import {gaClick} from '../helpers/functions'
 import { Link } from 'react-router';
-import { Col } from 'react-bootstrap';
+import { DropdownButton, MenuItem } from 'react-bootstrap';
 
 const Book = React.createClass({
 
     render(){
         let button;
-        if (this.props.type === "buy"){
+        if (this.props.text === "Buy Now"){
             button = (
-                <Link to={this.props.link} onClick={()=>{gaClick.handleClick()}}>
-                    <div className="button" >{this.props.text}</div>
-                </Link> 
+                <DropdownButton className="button" title={this.props.text} id='dropdown-basic' >
+                    {this.props.dropDownLinks.map((link, i) => <MenuItem>{link.retailer}</MenuItem>)}
+                </DropdownButton>
             )
         } else if (this.props.type === "see-all") {
             button = (

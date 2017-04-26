@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '../components/About';
+import Articles from '../components/Articles';
 import SectionTitle from '../components/SectionTitle';
 
 const AboutContainer = React.createClass({
@@ -7,10 +7,10 @@ const AboutContainer = React.createClass({
         return (
             <div>
                 <div className="page-title bg-grey">
-                    <SectionTitle title={this.props.about.pageTitle}/>
+                    <SectionTitle title={this.props.articles.pageTitle}/>
                 </div>
                 <div className="page-content">
-                    <About {...this.props}/>
+                    <Articles {...this.props}/>
                 </div>
             </div>
 

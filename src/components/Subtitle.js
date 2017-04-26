@@ -5,7 +5,7 @@ const Subtitle = React.createClass({
         return (
             <div>
                 <div className="subtitle" >
-                    <p>{this.props.subtitle}</p>
+                    <p><i className={this.props.icon} ></i>{this.props.subtitle}</p>
                 </div>
             </div>
         )

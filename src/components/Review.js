@@ -4,14 +4,30 @@ import { Col } from 'react-bootstrap';
 const Review = React.createClass({
 
     render(){
-        return (
+        let review;
+        //This code makes the last review in a set of odd numbered reviews will take up a full width
+        if (this.props.reviews.length%2 === 1 && this.props.reviews.length-1 !== this.props.i) {
+            review = 
             <Col xs={12} md={6}>
                 <div className="review">
-                    <p className="review-text">{this.props.text}</p>
-                    <p className="review-author">{this.props.reviewer}</p>
-                    <p className="review-publication">{this.props.publication}</p>
+                    <p className="review-text">{this.props.review.text}</p>
+                    <p className="review-author">{this.props.review.author}</p>
+                    <p className="review-publication">{this.props.review.publication}</p>
+                </div>
+            </Col>;
+        } else {
+            review = <Col xs={12} md={12}>
+                <div className="review">
+                    <p className="review-text">{this.props.review.text}</p>
+                    <p className="review-author">{this.props.review.author}</p>
+                    <p className="review-publication">{this.props.review.publication}</p>
                 </div>
             </Col>
+        }
+        return (
+            <div>
+                { review }
+            </div>
         )
     }
 });

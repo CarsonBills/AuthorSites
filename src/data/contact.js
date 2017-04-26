@@ -8,12 +8,12 @@ const contact = {
       },
       {
         "contactTitle": "Publicity",
-        "contactName": "jane Doe",
+        "contactName": "John Doe",
         "contactEmail": "jdoe[at]example[dot]com"
       },
       {
         "contactTitle": "Author",
-        "contactName": "jane Doe",
+        "contactName": "Jeremey Doe",
         "contactEmail": "jdoe[at]example[dot]com"
       }
     ]

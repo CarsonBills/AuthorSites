@@ -9,10 +9,7 @@ const Books = React.createClass({
                 <Grid>
                     <Row className="show-grid">
                         <div className="reviews-grid">
-                            <Review text={["From Here to Eternity", <br/>, "asdhj af aewrfg aserg res g", <br/>, "rghusker re es gse gs erg sergrse"]} reviewer="Jane Doe" publication="Booklist"/>
-                            <Review text={["From Here to Eternity", <br/>, "asdhj af aewrfg aserg res g", <br/>, "rghusker re es gse gs erg sergrse"]} reviewer="Jane Doe" publication="Booklist"/>
-                            <Review text={["From Here to Eternity", <br/>, "asdhj af aewrfg aserg res g", <br/>, "rghusker re es gse gs erg sergrse"]} reviewer="Jane Doe" publication="Booklist"/>
-                            <Review text={["From Here to Eternity", <br/>, "asdhj af aewrfg aserg res g", <br/>, "rghusker re es gse gs erg sergrse"]} reviewer="Jane Doe" publication="Booklist"/>                            
+                            {this.props.reviews.map((review, i) => <Review {...this.props} key={i} i={i} review={review} />)}                           
                         </div>
                     </Row>
                 </Grid>

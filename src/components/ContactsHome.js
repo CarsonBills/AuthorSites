@@ -1,11 +1,15 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
-import Contact from "../components/Contact";
+import ContactsPage from "../components/ContactsPage";
 import Subscribe from "../components/Subscribe";
 import Subtitle from "../components/Subtitle";
+import Instagram from "../components/Instagram";
 import { Grid, Row, Col } from 'react-bootstrap';
 
 const Contacts = React.createClass({
+    componentDidMount() {
+        this.props.fetchInstagram();  
+    },
     render(){
         return (
             <div>
@@ -13,19 +17,17 @@ const Contacts = React.createClass({
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title="Photos" />
+                                <SectionTitle title={this.props.home.photos.photosTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subtitle icon='<i class="fa fa-instagram"></i>'subtitle="Follow Caitlin Doughty on Instagram" />
+                                <Subtitle icon="fa fa-instagram" subtitle={this.props.home.photos.photosSubTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div className="photos">
-                                <img src="http://placehold.it/370x370"/>
-                                <img src="http://placehold.it/370x370"/>
-                                <img src="http://placehold.it/370x370"/>
+                                {this.props.instagram ? <Instagram {...this.props} /> : null }
                             </div>
                         </Row>
                     </Grid>
@@ -34,15 +36,11 @@ const Contacts = React.createClass({
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title="Contact" />
+                                <SectionTitle title={this.props.contact.pageTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
-                            <div>
-                                <Contact title="Agent" name="Jane Doe" email="jdoe@gmail.com"/>
-                                <Contact title="Publicity" name="Jane Doe" email="jdoe@gmail.com"/>
-                                <Contact title="Author" name="Jane Doe" email="jdoe@gmail.com"/>
-                            </div>
+                            {this.props.contact.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />)}
                         </Row>
                     </Grid>
                 </div>
@@ -50,17 +48,17 @@ const Contacts = React.createClass({
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title="Subscribe" />
+                                <SectionTitle title={this.props.home.subscribe.sectionTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subtitle subtitle="You'll recieve occasional updates on books, articles, and tour dates" />
+                                <Subtitle subtitle={this.props.home.subscribe.subtitle}/>
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subscribe />
+                                <Subscribe {...this.props}/>
                             </div>
                         </Row>
                     </Grid>
@@ -69,5 +67,6 @@ const Contacts = React.createClass({
         )
     }
 });
+
 
 export default Contacts;
