@@ -26,6 +26,8 @@ function logPageView() {
 
 
 import './index.css';
+import './global.css';
+import './cmessud.css';
 
 const router = (
   <Provider store={store}>

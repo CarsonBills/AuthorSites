@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+
+body, html {
+  background-color: #fff;
+  color: #646464;
+}
+
+.button {
+    background-color: #95ACB4;
+    color: white;
+}
+
+h2 {
+    font-family: 'Crimson Text', serif;
+    color: #DBA675;
+}
+
+h3 {
+    font-family: 'Crimson Text', serif;
+   color: #646464;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    color: #646464;
+}
+
+p.overline{
+    display: none;
+}
+
+.bg-grey {
+    background-color: #f5f5f5;
+}
+
+.top-bar {
+    background-color: #fff;
+    font-family: 'Crimson Text', serif;
+    .nav{    
+        a {
+            color: #646464;
+            .first {
+                color: #DBA675;
+            }
+            .second {
+                color: #DBA675;
+            }
+        }
+    }
+    .social {
+        p {
+            font-family: 'Crimson Text', serif;
+            color: #DBA675;
+        }
+        ul {
+           
+            li {
+               
+                a {    
+                    .fa-facebook-official{
+                        color: #3f4e83;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flying-panel {
+    background-color: #f5f5f5;
+    font-family: 'Crimson Text', serif;
+    .title {
+        .home {
+            font-size: 20px;
+        }
+        .first {
+            color: #DBA675;
+        }
+        .second {
+            color: #DBA675;
+        }
+        border-bottom: solid 1px #DBA675;
+    }
+    .nav{    
+        a {
+            color: #646464;
+            font-size: 18px;
+        }
+    }
+
+    .social {
+        border-top: solid 1px #353740;
+        p {
+            font-family: 'Crimson Text', serif;
+            color: #DBA675;
+        }
+        ul {
+
+            li {
+
+                a {    
+                    .fa-facebook-official{
+                        color: #3f4e83;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-title {
+    p {
+        &.underline {
+            border-bottom: solid 1px #DBA675;
+            width: 83px;
+            height: 1px;
+        }
+    }
+}
+
+.section-title {
+    color: #DBA675;
+    p {
+        &.underline {
+            border-bottom: solid 1px #DBA675;
+            width: 83px;
+            height: 1px;
+        }
+    }
+}
+
+.page-content {
+    .event {
+        border-bottom: 1px solid #f5f5f5;
+        font-family: "Poppins", sans-serif;
+        > div {
+            span {
+                font-size: 18px;
+            }
+        }
+
+        .details {
+            a {
+                color: #DBA675; 
+            }
+        }
+    }
+    .book-list {
+        .book {
+            p {
+                font-family: 'Crimson Text', serif;
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 30px;
+            }
+        }
+    }
+    .detail-data {
+        background-color: #f5f5f5;
+
+        .detail-description {
+            line-height: 50px;
+            font-size: 18px;
+            color: #646464;
+            a {
+               color: #95ACB4;
+            }
+        }
+    }
+    .detail-reviews{
+        .reviews-grid {
+            color: #95989A;
+            .review{
+                font-size: 20px;
+                .review-text {
+                    font-size: 18px;
+                }
+                .review-author {
+                    border-top: solid 1px #95989A;
+                    color: #DBA675;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .books-home {
+        background-color: #f5f5f5;
+        .container {
+            .row { 
+                .books-home-text {
+                    .detail-description {
+                        line-height: 50px;
+                        font-size: 18px;
+                        color: #646464;
+                            a {
+                               color: #95ACB4;
+                            }
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        background-color: #fff;
+        .container {
+            .about-description {
+                line-height: 50px;
+                font-size: 18px;
+                color: #646464;
+                a {
+                    color: #95ACB4;
+                }
+            }
+            .form-group{
+                font-size: 16px;
+                color: #DBA675;
+            }
+        }
+    }
+    .subscribe-home {
+        .subtitle {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+        .form-group{
+            font-size: 16px;
+            color: #DBA675;
+        }
+    }
+    .contacts-list {
+        background-color: #fff;
+        .contact {
+            .title {
+                font-family: 'Crimson Text', serif;
+                font-size: 30px;
+            }
+            .name {
+                color: #95989a;
+                font-size: 16px;
+            }
+            .email {
+                color: #e0e0e0;
+                font-size: 16px;
+            }  
+        }
+    }
+    .contacts-page {
+        .contact {
+            .title {
+                font-family: 'Crimson Text', serif;
+                font-size: 30px;
+            }
+            .name {
+                color: #95989a;
+                font-size: 16px;
+            }
+            .email {
+                color: #e0e0e0;
+                font-size: 16px;
+            }  
+        }
+    }
+}
+
+.video-list {
+    background-color: #f5f5f5;
+}
+
+
+.carousel {
+    background-color: #f5f5f5;
+    .slick-dots {
+        li.slick-active button:before {
+            color: #DBA675;
+        }
+        li:before {
+            color: white;
+        }
+    }
+}
+
+.photos {
+    .carousel {
+        background-color: #f5f5f5;
+        .slick-dots {
+            li.slick-active button:before {
+                color: #DBA675;
+            }
+            li:before {
+                color: white;
+            }
+        }
+    }
+}
+
+.see-all {
+    background-color: #95ACB4;
+    font-weight: bold;
+    font-size: 16px;
+    color: #e0e0e0;
+    .fa-chevron-right {
+        font-size: 13px;
+    }
+}
+
+.dropdown{
+    .button, .dropdown-toggle.btn-default {
+        border-color: #95ACB4;
+        background-color: #95ACB4;
+        color: white;
+        &:hover {
+            background-color: #95ACB4;
+            color: white;
+        }
+        &:active {
+            background-color: #17554B;
+        }
+    }
+    .dropdown-menu {
+        font-size: 16px;
+        background-color: #fff;
+        padding-bottom: 20px; 
+        li {
+            color: #646464;
+            a {
+                color: #646464;
+            }
+        }
+    }
+}
+
+
+.sort-by {
+    .dropdown{
+        .button, .dropdown-toggle.btn-default {
+            border-color: #95ACB4;
+            background-color: #95ACB4;
+            color: #646464;
+            box-shadow: none;
+            &:hover {
+                color: #646464;
+            }
+            &:active {
+                background-color: transparent;
+            }
+        }
+        .dropdown-menu {
+            font-size: 16px;
+            background-color: #fff;
+            padding-bottom: 20px; 
+            li {
+                color: #646464;
+                a {
+                    color: #646464;
+                }
+            }
+        }
+    }
+    
+}

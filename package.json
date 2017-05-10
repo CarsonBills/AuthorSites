@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "bootstrap": "^3.3.7",
+    "dns": "file:./src/dns",
     "jsonp": "^0.2.1",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
