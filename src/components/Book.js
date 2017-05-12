@@ -30,11 +30,11 @@ const Book = React.createClass({
             )
         } else {
             book = (
-                <Col xs={12} md={6} >
+               
                     <div className="book" onClick={gaClick.bind(this)}>
                         <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
                     </div>
-                </Col>
+                
             )
         }
         return (

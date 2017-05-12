@@ -20,6 +20,14 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+.footer {
+    background-color: #5d5d5d;;
+    a{
+        color: lightgrey;
+        text-decoration: none;
+    }
+}
+
 
 p.overline{
     display: none;
@@ -121,6 +129,7 @@ p.overline{
 }
 
 .page-title {
+    background-color: #202127;
     p {
         &.underline {
             border-bottom: solid 7px #f84338;
@@ -138,6 +147,27 @@ p.overline{
             border-bottom: solid 7px #f84338;
             width: 83px;
             height: 12px;
+        }
+    }
+}
+
+.homepage {
+    .page-title {
+        background-color: transparent;
+    }
+    .subscribe-home{
+        background-color: #202127;
+    }
+    .contacts-list{
+        background-color: #141519;
+    }
+    .photos-list {
+        background-color: #202127;
+    }
+    .videos-list {
+        background-color: #202127;
+        .video-list {
+            background-color: #202127;
         }
     }
 }
@@ -265,11 +295,75 @@ p.overline{
             }  
         }
     }
+    .articles-cointainer {
+        background-color: #141519;
+        .sections{
+            height: 85px;
+            text-align: center;
+            position:relative;
+            border-top: solid 1px darkgrey;
+            border-bottom: solid 1px darkgrey;
+            .section-links{
+                display: inline-block;
+                height: 85px;
+                .link {
+                    display:inline-block;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                    cursor: pointer;
+                    height: 85px;
+                    border-bottom: solid 2px transparent;
+                    p {
+                        line-height: 85px;
+                    }
+                    &.active {
+                        border-bottom: solid 2px #F84338;
+                        p {
+                            color: #F84338;
+                        }
+                    }
+                }
+                p:nth-child(1){
+                    width:100px;
+                }
+                p:nth-child(2){
+                    width:100px;
+
+                }
+            }
+            .sort-by {
+                line-height: 85px;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                border-left: solid 1px darkgrey;
+                .button {
+                    padding: 0;
+                    margin: 0; 
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+        .articles{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            .article {
+                text-align: center;
+                padding-left: 25px;
+                padding-right: 25px;
+                .abstract {
+                    line-height: 40px;
+                }
+            }
+        }
+    }
 }
 
 .video-list {
-    background-color: #202127;
+    background-color: #141519;
 }
+
 
 
 .carousel {

@@ -12,6 +12,14 @@ body, html {
     color: white;
 }
 
+.footer {
+    background-color: #EAEAEA;
+    a{
+        color: darkgrey;
+        text-decoration: none;
+    }
+}
+
 h2 {
     font-family: 'Crimson Text', serif;
     color: #DBA675;
@@ -134,6 +142,24 @@ p.overline{
     }
 }
 
+.homepage {
+    .page-title{
+        background-color: transparent;
+    }
+    .subscribe-home{
+        background-color: #f5f5f5;
+    }
+    .contacts-list{
+        background-color: #fff;
+    }
+    .photos-list {
+        background-color: #f5f5f5;
+    }
+    .videos-list {
+        background-color: #f5f5f5;
+    }
+}
+
 .page-content {
     .event {
         border-bottom: 1px solid #f5f5f5;
@@ -152,6 +178,7 @@ p.overline{
     }
     .book-list {
         .book {
+            color: #DBA675;
             p {
                 font-family: 'Crimson Text', serif;
                 font-size: 24px;
@@ -184,6 +211,69 @@ p.overline{
                     border-top: solid 1px #95989A;
                     color: #DBA675;
                     font-weight: bold;
+                }
+            }
+        }
+    }
+    .articles-cointainer {
+        background-color: #f5f5f5;
+        .sections{
+            height: 85px;
+            text-align: center;
+            position:relative;
+            border-top: solid 1px lightgrey;
+            border-bottom: solid 1px lightgrey;
+            .section-links{
+                display: inline-block;
+                height: 85px;
+                .link {
+                    display:inline-block;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                    cursor: pointer;
+                    height: 85px;
+                    border-bottom: solid 2px transparent;
+                    p {
+                        line-height: 85px;
+                    }
+                    &.active {
+                        border-bottom: solid 2px #DBA675;
+                        p {
+                            color: #DBA675;
+                        }
+                    }
+                }
+                p:nth-child(1){
+                    width:100px;
+                }
+                p:nth-child(2){
+                    width:100px;
+
+                }
+            }
+            .sort-by {
+                line-height: 85px;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                border-left: solid 1px lightgrey;
+                .button {
+                    padding: 0;
+                    margin: 0; 
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+        .articles{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            .article {
+                text-align: center;
+                padding-left: 25px;
+                padding-right: 25px;
+                .abstract {
+                    line-height: 40px;
                 }
             }
         }

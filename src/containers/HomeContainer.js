@@ -2,6 +2,7 @@ import React from 'react';
 import BooksHomeContainer from './BooksHomeContainer';
 import AboutHomeContainer from './AboutHomeContainer';
 import EventsContainer from './EventsContainer';
+import ArticlesContainer from './ArticlesContainer';
 import VideosContainer from './VideosContainer';
 import ContactHomeContainer from './ContactHomeContainer';
 import Carousel from "../components/Carousel";
@@ -9,7 +10,7 @@ import Carousel from "../components/Carousel";
 const Home = React.createClass({
     render(){
         return (
-            <div>
+            <div className="homepage">
                 <Carousel {...this.props} />
                 <AboutHomeContainer {...this.props} />
                 <BooksHomeContainer {...this.props} />

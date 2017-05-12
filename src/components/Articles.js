@@ -17,7 +17,12 @@ const Event = React.createClass({
         })
     },
     makeActive(section){
+        console.log("XXXXXXXXX", this.props.currentSection)
         this.props.activeSection(section);
+    },
+
+    isActive(title){
+        return 'link '+((title===this.props.currentSection) ?'active':'');
     },
     render(){
         return (
@@ -26,7 +31,7 @@ const Event = React.createClass({
                     <Row className="show-grid">
                         <div className="sections" >
                             <div className="section-links">
-                                {this.props.articles.sectionTitles.map((title, i) => <div onClick={this.makeActive.bind(this, title)}className="link"><p>{title}</p></div>)}
+                                {this.props.articles.sectionTitles.map((title, i) => <div onClick={this.makeActive.bind(this, title)}className={this.isActive(title)}><p>{title}</p></div>)}
                             </div>
                             <Sort sortBy={this.sortBy} articles={this.props.articles}/>
                         </div>

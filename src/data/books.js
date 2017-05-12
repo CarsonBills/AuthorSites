@@ -73,25 +73,27 @@ const books = [
              "link": "URL"
             },
         ],
-        "reviews" : [
+        "reviewSection" : {
             "showReviews": true,
             "sectionTitle" : "Reviews & Endorsements",
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            },
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            },
-            {
-               "author": "Jane Doe",
-               "publication": "Booklist",
-               "text": "Blah blah blah blah blah blah",
-            }
-        ],
+            "reviews" : [
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                },
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                },
+                {
+                   "author": "Jane Doe",
+                   "publication": "Booklist",
+                   "text": "Blah blah blah blah blah blah",
+                }
+            ]
+        },
     }
 ];
 

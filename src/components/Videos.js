@@ -26,7 +26,7 @@ const Videos = React.createClass({
                         </Row>
                     </Grid>
                 </div>
-                    <Button link="/videos" text="See All Videos" type="see-all"/>
+                    {number === '6' ? <Button link="/videos" text="See All Videos" type="see-all"/> : null}
             </div>
         )
     }

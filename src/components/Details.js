@@ -8,6 +8,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 const Details = React.createClass({
     render(){
+        console.log("DETAILS!!!", this.props)
         const link = "/books/"+this.props.book.url;
         return (
             <div className="book-detail">

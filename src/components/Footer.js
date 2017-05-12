@@ -1,0 +1,14 @@
+import React from 'react';
+import { Grid, Row } from 'react-bootstrap';
+
+const Footer = React.createClass({
+    render(){
+        return (
+            <div className="footer">
+                <p><a href="http://books.wwnorton.com/books/privacy.aspx?id=4294993591" target="_blank">Terms of Use</a> | <a href="http://books.wwnorton.com/books/privacy.aspx?id=4404" target="_blank">Privacy Policy</a></p>
+            </div>
+        )
+    }
+});
+
+export default Footer;

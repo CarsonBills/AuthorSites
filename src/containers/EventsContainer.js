@@ -5,7 +5,7 @@ import SectionTitle from '../components/SectionTitle';
 const EventsContainer = React.createClass({
     render(){
         return (
-            <div>
+            <div className="events">
                 <div className="page-title">
                     <SectionTitle title={this.props.events.pageTitle} />
                 </div>

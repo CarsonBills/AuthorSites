@@ -29,7 +29,8 @@ const siteConfig = {
         "Books",
         "Events",
         "Videos",
-        "Contact"
+        "Contact",
+        "Articles"
       ]
     },
     "stylesheet": "url to stylesheet",

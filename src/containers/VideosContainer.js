@@ -5,7 +5,7 @@ import Videos from '../components/Videos';
 const VideosContainer = React.createClass({
     render(){
         return (
-            <div>
+            <div className="videos-list">
                 <div className="page-title">
                     <SectionTitle title={this.props.videos.pageTitle} />
                 </div>
