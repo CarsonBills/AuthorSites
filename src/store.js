@@ -1,4 +1,4 @@
-import {createStore, comps, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {syncHistoryWithStore} from 'react-router-redux';
 import {browserHistory} from "react-router";
 import ReduxPromise from "redux-promise";

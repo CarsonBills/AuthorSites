@@ -14,7 +14,7 @@ const Carousel = React.createClass ({
     return (
       <div className='carousel'>
         <Slider {...settings}>
-          {this.props.instagram[0].data.map((picture, i) => <div><img src={picture.images.low_resolution.url}/></div>)}
+          {this.props.instagram[0].data.map((picture, i) => <div key={i}><img src={picture.images.low_resolution.url}/></div>)}
         </Slider>
       </div>
     );

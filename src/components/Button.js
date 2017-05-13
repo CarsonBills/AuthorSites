@@ -10,7 +10,7 @@ const Book = React.createClass({
         if (this.props.text === "Buy Now"){
             button = (
                 <DropdownButton className="button" title={this.props.text} id='dropdown-basic' >
-                    {this.props.dropDownLinks.map((link, i) => <MenuItem>{link.retailer}</MenuItem>)}
+                    {this.props.dropDownLinks.map((link, i) => <MenuItem key={i}>{link.retailer}</MenuItem>)}
                 </DropdownButton>
             )
         } else if (this.props.type === "see-all") {

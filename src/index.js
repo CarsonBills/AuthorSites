@@ -11,7 +11,7 @@ import VideosContainer from './containers/VideosContainer';
 import ContactContainer from './containers/ContactContainer';
 import DetailContainer from './containers/DetailContainer';
 
-import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { Router, Route, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
 
 import store, { history } from './store';

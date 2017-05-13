@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutHome from '../components/AboutHome';
-import SectionTitle from '../components/SectionTitle';
 
 const AboutHomeContainer = React.createClass({
     render(){

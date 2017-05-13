@@ -2,7 +2,6 @@ import React from 'react';
 import BooksHomeContainer from './BooksHomeContainer';
 import AboutHomeContainer from './AboutHomeContainer';
 import EventsContainer from './EventsContainer';
-import ArticlesContainer from './ArticlesContainer';
 import VideosContainer from './VideosContainer';
 import ContactHomeContainer from './ContactHomeContainer';
 import Carousel from "../components/Carousel";

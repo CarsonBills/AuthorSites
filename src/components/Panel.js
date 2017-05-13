@@ -14,12 +14,12 @@ const Panel = React.createClass({
                     <Link to='/'><span className="home"><span className="first">{this.props.siteConfig.header.titleFirst}</span> <span className="second">{this.props.siteConfig.header.titleSecond}</span></span></Link>
                 </div>
                 <div className="nav">
-                    {this.props.siteConfig.header.type.map((link, i) => <li><Link to={link}>{link}</Link></li>)}
+                    {this.props.siteConfig.header.type.map((link, i) => <li key={i}><Link to={link}>{link}</Link></li>)}
                 </div>
                 <div className="social">
                     <p>{this.props.siteConfig.social.socialLinksTitle}</p>
                     <ul>
-                        {this.props.siteConfig.social.links.map((link, i) => <li><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
+                        {this.props.siteConfig.social.links.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
                     </ul>
                 </div>
             </div>

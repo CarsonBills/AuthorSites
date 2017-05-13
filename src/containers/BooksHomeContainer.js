@@ -1,6 +1,5 @@
 import React from 'react';
 import BooksHome from '../components/BooksHome';
-import SectionTitle from '../components/SectionTitle';
 import Button from "../components/Button";
 
 const BooksHomeContainer = React.createClass({
