@@ -42,20 +42,20 @@ class Subscribe extends Component {
     if (this.props.title){
       form = (
         <FormGroup onSubmit={this.onSubmit}>
-          <p>{this.props.about.newsletter.signUpTitleText}</p>
+          <p>{this.props.siteConfig.newsletter.signUpTitleText}</p>
           <InputGroup>
             <div className="Email">
               <input
                 ref='email'
                 type='text'
                 className='form-control'
-                placeholder='email'
+                placeholder={this.props.siteConfig.newsletter.signUpPlaceholder}
                 onBlur={this.props.handleValidation('email')}
               />
               {this.props.getValidationMessages('email')}
             </div>
             <InputGroup.Button>
-              <div onClick={this.onSubmit} className="button" >{this.props.about.newsletter.signUpButtonText}</div>
+              <div onClick={this.onSubmit} className="button" >{this.props.siteConfig.newsletter.signUpButtonText}</div>
             </InputGroup.Button>
           </InputGroup>
         </FormGroup>
@@ -70,13 +70,13 @@ class Subscribe extends Component {
                 ref='email'
                 type='text'
                 className='form-control'
-                placeholder='email'
+                placeholder={this.props.siteConfig.newsletter.signUpPlaceholder}
                 onBlur={this.props.handleValidation('email')}
               />
               {this.props.getValidationMessages('email')}
             </div>
             <InputGroup.Button>
-              <div onClick={this.onSubmit} className="button" >{this.props.about.newsletter.signUpButtonText}</div>
+              <div onClick={this.onSubmit} className="button" >{this.props.siteConfig.newsletter.signUpButtonText}</div>
             </InputGroup.Button>
           </InputGroup>
         </FormGroup>

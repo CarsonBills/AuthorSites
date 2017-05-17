@@ -14,9 +14,7 @@ const Articles = (props) => {
                             {props.sectionTitles.map((title, index) => {
                                 let linkClass = "link ";
                                 linkClass += (index === props.activeSessionIndex) ? "active" : "";
-                                return <div key={index} onClick={() => props.activeSection(index)}
-                                    className={linkClass}
-                                >
+                                return <div key={index} onClick={() => props.activeSection(index)} className={linkClass} >
                                     <p>{title}</p>
                                 </div>
                             })
@@ -29,7 +27,6 @@ const Articles = (props) => {
                     {props.articles.map((article, i) => <Article key={i} i={i} article={article} />)}
                 </Row>
             </Grid>
-            <Button link="/videos" text="See All Articles" type="see-all" />
         </div>
     )
 }

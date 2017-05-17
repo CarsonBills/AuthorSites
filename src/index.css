@@ -462,7 +462,9 @@ p {
 .page-content .articles-cointainer .sections {
   height: 85px;
   text-align: center;
-  position: relative; }
+  position: relative;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey; }
   .page-content .articles-cointainer .sections .section-links {
     display: inline-block;
     height: 85px; }
@@ -506,8 +508,7 @@ p {
 
 .video-list {
   background-color: #202127;
-  padding-bottom: 100px;
-  padding-top: 100px; }
+  padding-bottom: 100px; }
   .video-list .videos-list > div > div {
     height: 280px; }
   .video-list .videos-list .video img {

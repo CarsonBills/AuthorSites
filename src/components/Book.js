@@ -6,7 +6,7 @@ import {gaClick} from '../helpers/functions'
 import { Link } from 'react-router';
 import { Col } from 'react-bootstrap';
 
-const Book = React.createClass({
+class Book extends React.Component {
 
     render(){
         let book;
@@ -43,6 +43,6 @@ const Book = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Book;

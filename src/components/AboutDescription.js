@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const AboutDescription = React.createClass({
+class AboutDescription extends React.Component {
 
     render(){
         return (
@@ -12,6 +12,6 @@ const AboutDescription = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default AboutDescription;

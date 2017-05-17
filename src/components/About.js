@@ -3,7 +3,7 @@ import AboutDescription from '../components/AboutDescription';
 import Subscribe from '../components/Subscribe';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const About = React.createClass({
+class About extends React.Component {
     render(){
         return (
             <div className="about about-page">
@@ -11,7 +11,7 @@ const About = React.createClass({
                     <Row className="show-grid">
                         <div>
                             <Col xs={12} md={6}>
-                                <div >
+                                <div className="about-image" >
                                     <img src={this.props.about.authorImageURL}/>
                                 </div>
                             </Col>
@@ -27,6 +27,6 @@ const About = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default About;

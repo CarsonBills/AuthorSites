@@ -5,31 +5,34 @@ import Mask from "../components/Mask";
 import Panel from "../components/Panel";
 import Footer from "../components/Footer";
 
-const Main = React.createClass({
-    getInitialState() {
-        return {
+class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             panelActive: false
-        };
-    },
+        }
+        this.barsClick = this.barsClick.bind(this);
+        this.maskClick = this.maskClick.bind(this);
+    }
     barsClick(){
         this.setState({panelActive: true})
-    },
+    }
     maskClick(){
         this.setState({panelActive: false})
-    },
+    }
     render(){
         console.log("Main", this.props)
         return (
             <div>
-                <div className="bleepbloop">
+                <div>
                     <Grid>
                         <Row className="show-grid ">
                             <div className="top-bar">
                                 <Col xs={12} sm={12} lg={9} md={9}>
                                     <div className="nav">
                                         <ul>
-                                            <li><Link to='/'><span className="home"><span className="first">{this.props.siteConfig.header.titleFirst}</span> <span className="second">{this.props.siteConfig.header.titleSecond}</span></span></Link></li>
-                                            {this.props.siteConfig.header.type.map((link, i) => <li key={i}><Link to={link}>{link}</Link></li>)}
+                                            <li><Link to='/'><span className="home"><span className="first">{this.props.siteConfig.authorFirstName}</span> <span className="second">{this.props.siteConfig.authorLastName}</span></span></Link></li>
+                                            {this.props.siteConfig.header.map((link, i) => <li key={i}><Link to={link.title}>{link.title}</Link></li>)}
                                         </ul>
                                     </div>
                                 </Col>
@@ -37,7 +40,7 @@ const Main = React.createClass({
                                     <div className="social">
                                         <p>{this.props.siteConfig.social.socialLinksTitle}</p>
                                         <ul>
-                                            {this.props.siteConfig.social.links.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
+                                            {this.props.siteConfig.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>)}
                                         </ul>
                                     </div>
                                 </Col>
@@ -46,14 +49,14 @@ const Main = React.createClass({
                                 <Col xs={12} sm={12} lg={8} md={9}>
                                     <div className="nav">
                                         <i className="fa fa-bars" aria-hidden="true" onClick={this.barsClick}></i>
-                                        <Link to='/'><span className="home"><span className="first">{this.props.siteConfig.header.titleFirst}</span> <span className="second">{this.props.siteConfig.header.titleSecond}</span></span></Link>
+                                        <Link to='/'><span className="home"><span className="first">{this.props.siteConfig.authorFirstName}</span> <span className="second">{this.props.siteConfig.authorLastName}</span></span></Link>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={3} lg={3} md={3}  lgOffset={1} mdOffset={0} sm={12}>
                                     <div className="social">
                                         <p>{this.props.siteConfig.social.socialLinksTitle}</p>
                                         <ul>
-                                            {this.props.siteConfig.social.links.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
+                                            {this.props.siteConfig.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
                                         </ul>
                                     </div>
                                 </Col>
@@ -69,6 +72,6 @@ const Main = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Main;

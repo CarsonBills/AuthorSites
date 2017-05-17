@@ -3,7 +3,7 @@ import ContactsPage from '../components/ContactsPage';
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row } from 'react-bootstrap';
 
-const ContactPageContainer = React.createClass({
+class ContactPageContainer extends React.Component {
     render(){
         return (
             <div>
@@ -24,6 +24,6 @@ const ContactPageContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default ContactPageContainer;

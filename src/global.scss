@@ -96,7 +96,7 @@ h2 {
 .flying-panel {
     position: absolute;
     width: 270px;
-    height: 470px;
+    height: 550px;
     transform: translate(-270px);
     transition-duration: 250ms;
     z-index: 1000;
@@ -165,7 +165,7 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     background-color: black;
     opacity: 0.7;
@@ -179,6 +179,77 @@ h2 {
     transform: translate(0px);
     transition-duration: 250ms;
 }
+
+
+.mobile-nav {
+    display: none;
+    background-color: #141519;
+    font-family: 'Josefin Slab', serif;
+    .nav{
+        text-align: center;  
+        padding-top: 30px;
+        padding-bottom: 40px;
+        position: relative;
+        .fa-bars {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            font-size: 25px;
+            padding: 10px;
+            border: #41AC9B solid 2px;
+            cursor: pointer;
+        }
+        ul {
+            padding-left:0px;
+            margin-bottom: 0px;
+            li {
+                display: inline-block;
+            }
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            .home {
+                font-size: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .social {
+        display: none;
+        padding-top: 25px;
+        text-align: center;
+        p {
+            font-family: 'Josefin Slab', serif;
+        }
+        ul {
+            padding-left: 0;
+            li {
+                display: inline-block;
+                a {    
+                    margin-top: 15px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    font-size: 18px; 
+                    .fa-youtube-play {
+                        color: #E31A0D;
+                    }
+                    .fa-instagram {
+                        color: #762f7c;
+                    }
+                    .fa-twitter{
+                        color: #6c9adc;
+                    }
+                    .fa-facebook-official{
+                        color: #3f4e83;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .page-title {
     max-height: 277px;
@@ -313,6 +384,11 @@ h2 {
         .container {
             position: relative;
             top: -20px;
+            .about-image {
+                img {
+                    width: 480px;
+                }
+            }
             .about-description {
                 width:540px;
                 margin-bottom: 55px;
@@ -416,73 +492,10 @@ h2 {
             text-align: center;
         }
     }
-    .articles-cointainer {
-        .sections{
-            height: 85px;
-            text-align: center;
-            position:relative;
-            border-top: solid 1px lightgrey;
-            border-bottom: solid 1px lightgrey;
-            .section-links{
-                display: inline-block;
-                height: 85px;
-                .link {
-                    display:inline-block;
-                    margin-left: 40px;
-                    margin-right: 40px;
-                    cursor: pointer;
-                    height: 85px;
-                    border-bottom: solid 2px transparent;
-                    p {
-                        line-height: 85px;
-                    }
-                    &.active {
-                        border-bottom: solid 2px #DBA675;
-                        p {
-                            color: #DBA675;
-                        }
-                    }
-                }
-                p:nth-child(1){
-                    width:100px;
-                }
-                p:nth-child(2){
-                    width:100px;
-
-                }
-            }
-            .sort-by {
-                line-height: 85px;
-                display: inline-block;
-                position: absolute;
-                right: 0;
-                border-left: solid 1px lightgrey;
-                .button {
-                    padding: 0;
-                    margin: 0; 
-                    background-color: transparent;
-                    border: none;
-                }
-            }
-        }
-        .articles{
-            margin-top: 100px;
-            margin-bottom: 100px;
-            .article {
-                text-align: center;
-                padding-left: 25px;
-                padding-right: 25px;
-                .abstract {
-                    line-height: 40px;
-                }
-            }
-        }
-    }
 }
 
 .video-list {
     padding-bottom: 100px;
-    padding-top: 100px;
     .videos-list {
         > div > div {
             height: 280px;

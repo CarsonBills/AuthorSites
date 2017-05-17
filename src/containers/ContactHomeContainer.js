@@ -2,7 +2,7 @@ import React from 'react';
 import ContactsHome from '../components/ContactsHome';
 import SectionTitle from '../components/SectionTitle';
 
-const ContactContainer = React.createClass({
+class ContactContainer extends React.Component {
     render(){
         return (
             <div>
@@ -12,6 +12,6 @@ const ContactContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default ContactContainer;

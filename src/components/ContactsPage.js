@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from "../components/Contact";
 
-const ContactsPage = React.createClass({
+class ContactsPage extends React.Component {
     render(){
         return (
             <div>
@@ -9,6 +9,6 @@ const ContactsPage = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default ContactsPage;

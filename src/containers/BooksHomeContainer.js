@@ -2,7 +2,7 @@ import React from 'react';
 import BooksHome from '../components/BooksHome';
 import Button from "../components/Button";
 
-const BooksHomeContainer = React.createClass({
+class BooksHomeContainer extends React.Component {
     render(){
         return (
             <div>
@@ -10,11 +10,11 @@ const BooksHomeContainer = React.createClass({
                     <div className="books-home">
                         {this.props.books.map((book, i) => <BooksHome {...this.props} key={i} i={i} book={book} />)}
                     </div>
-                    <Button text="See All Books" link="#" type="see-all"/>
+                    <Button text="See All Books" link="/books" type="see-all"/>
                 </div>
             </div>
         )
     }
-});
+}
 
 export default BooksHomeContainer;

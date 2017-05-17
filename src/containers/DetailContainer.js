@@ -2,7 +2,7 @@ import React from 'react';
 import Details from '../components/Details';
 
 
-const DetailContainer = React.createClass({
+class DetailContainer extends React.Component {
     render(){
         const i = this.props.books.findIndex((book) => book.url === this.props.params.id);
         const book = this.props.books[i];
@@ -14,6 +14,6 @@ const DetailContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default DetailContainer;

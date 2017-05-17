@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutHome from '../components/AboutHome';
 
-const AboutHomeContainer = React.createClass({
+class AboutHomeContainer extends React.Component {
     render(){
         return (
             <div>
@@ -12,6 +12,6 @@ const AboutHomeContainer = React.createClass({
 
         )
     }
-});
+}
 
 export default AboutHomeContainer;

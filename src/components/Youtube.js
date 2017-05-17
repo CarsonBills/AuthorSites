@@ -2,7 +2,7 @@ import React from 'react';
 import Video from "../components/Video";
 import CarouselInstagram from "../components/CarouselInstagram"
 
-const Youtube = React.createClass({
+class Youtube extends React.Component{
     render(){
         var numberOfVideos = this.props.numberOfVideos
         return (
@@ -11,6 +11,6 @@ const Youtube = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Youtube;

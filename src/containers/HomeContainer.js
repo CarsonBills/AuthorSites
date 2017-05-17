@@ -6,7 +6,7 @@ import VideosContainer from './VideosContainer';
 import ContactHomeContainer from './ContactHomeContainer';
 import Carousel from "../components/Carousel";
 
-const Home = React.createClass({
+class Home extends React.Component{
     render(){
         return (
             <div className="homepage">
@@ -19,6 +19,6 @@ const Home = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Home;

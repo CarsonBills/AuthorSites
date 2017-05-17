@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Subtitle = React.createClass({
+class Subtitle extends React.Component {
     render(){
         return (
             <div>
@@ -10,6 +10,6 @@ const Subtitle = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Subtitle;

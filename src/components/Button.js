@@ -3,7 +3,7 @@ import {gaClick} from '../helpers/functions'
 import { Link } from 'react-router';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 
-const Book = React.createClass({
+class Button extends React.Component {
 
     render(){
         let button;
@@ -26,6 +26,6 @@ const Book = React.createClass({
             </div>
         )
     }
-});
+}
 
-export default Book;
+export default Button;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Row } from 'react-bootstrap';
 
-const Footer = React.createClass({
+class Footer extends React.Component {
     render(){
         return (
             <div className="footer">
@@ -9,6 +9,6 @@ const Footer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Footer;

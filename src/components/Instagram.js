@@ -1,7 +1,7 @@
 import React from 'react';
 import CarouselInstagram from "../components/CarouselInstagram"
 
-const Books = React.createClass({
+class Instagram extends React.Component {
     render(){
         return (
             <div>
@@ -9,6 +9,6 @@ const Books = React.createClass({
             </div>
         )
     }
-});
+}
 
-export default Books;
+export default Instagram;

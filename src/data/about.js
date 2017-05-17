@@ -1,16 +1,11 @@
 const about = {
-    "pageTitle":"About Caitlin Doughty",
-    "description": "Mortician Caitlin Doughty--host and creator of Ask a Mortician and the New York Times best-selling author if Smoke Gets in Your Eyes - founded The Order of the Good Death. She lives in Los Angeles. where she runs her nonprofit funeral home. Undertaking L.A.",
-    "newsletter": {
-      "showNewsletter":true,
-      "signUpTitleText": "Sign Up for Newsletter",
-      "signUpButtonText": "Sign Up",
-      "signUpPlaceholder": "Enter your Email Address"
-    },
-    "link": "/about",
-    "CampaignMonitorID": "Test1234",
-    "authorImageURL":"http://placehold.it/480x480"
-};
-
+    "pageTitle": "About",
+    "link": "about",
+    "aboutPageText": "About Caitlin Doughty",
+    "description": "<p>Mortician&nbsp;<strong>Caitlin Doughty</strong>&mdash;host and creator of &ldquo;Ask a Mortician&rdquo; and the&nbsp;<em>New York Times</em>&nbsp;best-selling author of&nbsp;<em>Smoke Gets in Your Eyes</em>&mdash;founded the death acceptance collective The Order of the Good Death and co-founded Death Salon. She lives in Los Angeles, where she runs her nonprofit funeral home, Undertaking LA.</p>\n",
+    "showNewsletter": true,
+    "authorImageURL": "http://cdn.wwnorton.com/contributors/img/portrait198/15147_170210_198.jpg",
+    "title": "About"
+}
 
 export default about;

@@ -1,35 +1,19 @@
 const events = {
-    "pageTitle":"Events",
+    "pageTitle": "Events",
+    "link": "events",
     "sections": [
-      {
-        "date": "01/02/2018",
-        "city": "Toronto",
-        "location": "Barnes and Noble",
-        "detailsLabel": "Details/Tickets",
-        "detailsLink": "www.example.com",
-        "startDate": "01/01/1970",
-        "endDate": "01/01/2020"
-      },
-      {
-        "date": "01/02/2018",
-        "city": "New York City",
-        "location": "Barnes and Noble",
-        "detailsLabel": "Details/Tickets",
-        "detailsLink": "www.example.com",
-        "startDate": "01/01/1970",
-        "endDate": "01/01/2020"
-      },
-      {
-        "date": "01/02/2018",
-        "city": "Boston",
-        "location": "Barnes and Noble",
-        "detailsLabel": "Details/Tickets",
-        "detailsLink": "www.example.com",
-        "startDate": "01/01/1970",
-        "endDate": "01/01/2020"
-      }
-    ]
-};
+        {
+            "eventDate": "05/25/2017",
+            "city": "New York",
+            "location": "Barnes & Noble",
+            "detailsLabel": "Details/Ticket",
+            "detailsLink": "http://www.google.com",
+            "startDate": "04/30/2017",
+            "endDate": "11/04/2017"
+        }
+    ],
+    "title": "Events"
+}
 
 
 export default events;

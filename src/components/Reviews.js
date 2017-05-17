@@ -2,7 +2,7 @@ import React from 'react';
 import Review from "../components/Review";
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const Books = React.createClass({
+class Reviews extends React.Component {
     render(){
         return (
             <div>
@@ -16,6 +16,6 @@ const Books = React.createClass({
             </div>
         )
     }
-});
+}
 
-export default Books;
+export default Reviews;

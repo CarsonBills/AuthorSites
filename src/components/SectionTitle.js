@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SectionTitle = React.createClass({
+class SectionTitle extends React.Component {
     render(){
         return (
             <div>
@@ -11,6 +11,6 @@ const SectionTitle = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default SectionTitle;

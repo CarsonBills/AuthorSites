@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-const Review = React.createClass({
+class Review extends React.Component{
 
     render(){
         let review;
@@ -30,6 +30,6 @@ const Review = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Review;

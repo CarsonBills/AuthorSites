@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick'
 
-const Carousel = React.createClass ({
+class Carousel extends React.Component{
 
   render() {
     var settings = {
@@ -19,6 +19,6 @@ const Carousel = React.createClass ({
       </div>
     );
   }
-});
+}
 
 export default Carousel

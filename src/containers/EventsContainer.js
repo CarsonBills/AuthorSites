@@ -2,7 +2,7 @@ import React from 'react';
 import Event from '../components/Event';
 import SectionTitle from '../components/SectionTitle';
 
-const EventsContainer = React.createClass({
+class EventsContainer extends React.Component {
     render(){
         return (
             <div className="events">
@@ -15,6 +15,6 @@ const EventsContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default EventsContainer;

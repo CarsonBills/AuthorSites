@@ -2,7 +2,7 @@ import React from 'react';
 import SectionTitle from '../components/SectionTitle';
 import Videos from '../components/Videos';
 
-const VideosContainer = React.createClass({
+class VideosContainer extends React.Component{
     render(){
         return (
             <div className="videos-list">
@@ -15,6 +15,6 @@ const VideosContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default VideosContainer;

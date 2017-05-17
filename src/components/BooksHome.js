@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import TextTruncate from 'react-text-truncate'; 
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const BooksHome = React.createClass({
+class BooksHome extends React.Component {
     render(){
         let link = "/books/"+this.props.book.url;
         return (
@@ -37,6 +37,6 @@ const BooksHome = React.createClass({
             </Grid>
         )
     }
-});
+}
 
 export default BooksHome;

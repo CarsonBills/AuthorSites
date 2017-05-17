@@ -3,7 +3,7 @@ import Books from '../components/Books';
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row } from 'react-bootstrap';
 
-const BooksListContainer = React.createClass({
+class BooksListContainer extends React.Component {
     render(){
         return (
             <div>
@@ -20,6 +20,6 @@ const BooksListContainer = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default BooksListContainer;

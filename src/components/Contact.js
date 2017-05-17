@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-const Contact = React.createClass({
+class Contact extends React.Component {
     render(){
         return (
             <Col xs={12} md={4} >
@@ -13,6 +13,6 @@ const Contact = React.createClass({
             </Col>
         )
     }
-});
+}
 
 export default Contact;

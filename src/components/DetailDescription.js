@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DetailDescription = React.createClass({
+class DetailDescription extends React.Component {
 
     render(){
         return (
@@ -12,6 +12,6 @@ const DetailDescription = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default DetailDescription;

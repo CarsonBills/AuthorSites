@@ -2,14 +2,13 @@ import React from 'react';
 import ReactGA from 'react-ga';
 
 
-const gaClick = React.createClass({
+class gaClick extends React.Component {
     handleClick() {
         ReactGA.event({
             category: 'Navigation',
             action: 'Clicked Link',
         });
-    },
-    
+    }
     render() {
 
         return (
@@ -18,6 +17,6 @@ const gaClick = React.createClass({
             </div>
         );
     }
-})    
+}
 
 export default gaClick

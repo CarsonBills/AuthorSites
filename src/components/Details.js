@@ -6,7 +6,7 @@ import Reviews from "../components/Reviews";
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const Details = React.createClass({
+class Details extends React.Component {
     render(){
         console.log("DETAILS!!!", this.props)
         const link = "/books/"+this.props.book.url;
@@ -42,7 +42,7 @@ const Details = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Details;                
 

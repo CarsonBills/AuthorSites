@@ -1,7 +1,7 @@
 import React from 'react';
 import {gaClick} from '../components/gaClick'
 
-const Book = React.createClass({
+class Book extends React.Component {
 
     render(){
         return (
@@ -10,6 +10,6 @@ const Book = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Book;

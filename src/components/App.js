@@ -14,7 +14,8 @@ function mapStateToProps(state){
         siteConfig: state.siteConfig,
         videos: state.videos,
         youtube: state.youtube,
-        instagram: state.instagram
+        instagram: state.instagram,
+        youtubeUserId: state.youtubeUserId
     }
 }
 

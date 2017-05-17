@@ -2,7 +2,7 @@ import React from 'react';
 import BookCover from '../components/Book';
 import { Grid, Row } from 'react-bootstrap';
 
-const Books = React.createClass({
+class Books extends React.Component {
     render(){
         const link = "/books/"+this.props.book.url;
         return (
@@ -11,6 +11,6 @@ const Books = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Books;

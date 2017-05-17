@@ -121,6 +121,14 @@ p.overline{
     }
 }
 
+.mobile-nav {
+    .nav {
+        a {
+            color: #DBA675;
+        }
+    }
+}
+
 .page-title {
     p {
         &.underline {

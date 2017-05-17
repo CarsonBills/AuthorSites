@@ -6,10 +6,10 @@ import Subtitle from "../components/Subtitle";
 import Instagram from "../components/Instagram";
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const Contacts = React.createClass({
+class Contacts extends React.Component {
     componentDidMount() {
         this.props.fetchInstagram();  
-    },
+    }
     render(){
         return (
             <div>
@@ -48,12 +48,12 @@ const Contacts = React.createClass({
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title={this.props.home.subscribe.sectionTitle} />
+                                <SectionTitle title={this.props.home.newsletter.sectionTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subtitle subtitle={this.props.home.subscribe.subtitle}/>
+                                <Subtitle subtitle={this.props.home.newsletter.subtitle}/>
                             </div>
                         </Row>
                         <Row className="show-grid ">
@@ -66,7 +66,7 @@ const Contacts = React.createClass({
             </div>
         )
     }
-});
+}
 
 
 export default Contacts;

@@ -3,11 +3,20 @@ import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
 import Youtube from "../components/Youtube";
 import { Grid, Row, Col } from 'react-bootstrap';
+import store from '../store';
 
-const Videos = React.createClass({
-    componentDidMount() {
-        this.props.fetchYoutube();  
-    },
+class Videos extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    componentWillMount() {
+        const user_id = this.props.youtube
+        console.log("FDKJSHLIEUHFE", user_id)
+        store.dispatch(this.props.fetchYoutubeUserID("OrderoftheGoodDeath")).then(() => {
+            console.log("MIdpoint", this.props)
+            store.dispatch(this.props.fetchYoutube(this.props.youtubeUserId[0]));
+        });
+    }
     render(){
         let number;
         if (this.props.numberOfVideos){
@@ -30,6 +39,6 @@ const Videos = React.createClass({
             </div>
         )
     }
-});
+}
 
 export default Videos;

@@ -612,6 +612,8 @@ p {
             height: 85px;
             text-align: center;
             position:relative;
+            border-top: solid 1px lightgrey;
+            border-bottom: solid 1px lightgrey;
             .section-links{
                 display: inline-block;
                 height: 85px;
@@ -671,7 +673,6 @@ p {
 .video-list {
     background-color: #202127;
     padding-bottom: 100px;
-    padding-top: 100px;
     .videos-list {
         > div > div {
             height: 280px;
