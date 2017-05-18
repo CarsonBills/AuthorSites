@@ -10,7 +10,7 @@ class Home extends React.Component{
     render(){
         return (
             <div className="homepage">
-                <Carousel {...this.props} />
+                <Carousel slidesToShow={1} sidesToScroll={1} {...this.props} />
                 <AboutHomeContainer {...this.props} />
                 <BooksHomeContainer {...this.props} />
                 <EventsContainer {...this.props} />

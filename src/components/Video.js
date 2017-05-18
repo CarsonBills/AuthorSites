@@ -69,7 +69,7 @@ class Video extends React.Component{
                       onRequestClose={this.closeModal}
                       style={customStyles}
                       contentLabel="Example Modal">
-                      <iframe onClick={this.openModal} width="700" height="510" src={src} frameborder="0" allowfullscreen></iframe>
+                      <iframe onClick={this.openModal} width="700" height="510" src={src} frameBorder="0" allowFullScreen></iframe>
                     </Modal>
                 </div>
             </Col>

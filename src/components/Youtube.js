@@ -1,6 +1,6 @@
 import React from 'react';
 import Video from "../components/Video";
-import CarouselInstagram from "../components/CarouselInstagram"
+
 
 class Youtube extends React.Component{
     render(){

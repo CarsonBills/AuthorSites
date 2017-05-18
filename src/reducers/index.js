@@ -12,7 +12,8 @@ import videos from "./videos";
 import instagram from "./instagram";
 import youtube from "./youtube";
 import youtubeUserId from "./youtubeUserId";
+import instagramUserId from "./instagramUserId";
 
-const rootReducer = combineReducers({books, about, articles, contact, events, home, siteConfig, videos, instagram, youtube, youtubeUserId, routing: routerReducer});
+const rootReducer = combineReducers({books, about, articles, contact, events, home, siteConfig, videos, instagram, youtube, youtubeUserId, instagramUserId, routing: routerReducer});
 
 export default rootReducer;

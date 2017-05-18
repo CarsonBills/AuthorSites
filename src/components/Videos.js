@@ -10,10 +10,8 @@ class Videos extends React.Component {
         super(props);
     }
     componentWillMount() {
-        const user_id = this.props.youtube
-        console.log("FDKJSHLIEUHFE", user_id)
-        store.dispatch(this.props.fetchYoutubeUserID("OrderoftheGoodDeath")).then(() => {
-            console.log("MIdpoint", this.props)
+        store.dispatch(this.props.fetchYoutubeUserID(this.props.videos.channelName)).then(() => {
+            console.log("Midpoint", this.props)
             store.dispatch(this.props.fetchYoutube(this.props.youtubeUserId[0]));
         });
     }

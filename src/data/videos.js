@@ -1,6 +1,6 @@
 const videos = {
     "pageTitle":"Videos",
-    "channelURL": "www.youtube.com",
+    "channelName": "OrderOfTheGoodDeath",
     "sections" : [
       {
         "videoTitle": "1 Video Example Title",

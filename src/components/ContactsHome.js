@@ -7,9 +7,6 @@ import Instagram from "../components/Instagram";
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class Contacts extends React.Component {
-    componentDidMount() {
-        this.props.fetchInstagram();  
-    }
     render(){
         return (
             <div>
@@ -27,7 +24,7 @@ class Contacts extends React.Component {
                         </Row>
                         <Row className="show-grid ">
                             <div className="photos">
-                                {this.props.instagram ? <Instagram {...this.props} /> : null }
+                                <Instagram {...this.props} />
                             </div>
                         </Row>
                     </Grid>
@@ -40,7 +37,7 @@ class Contacts extends React.Component {
                             </div>
                         </Row>
                         <Row className="show-grid ">
-                            {this.props.contact.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />)}
+                            {this.props.contact.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) }
                         </Row>
                     </Grid>
                 </div>

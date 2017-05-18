@@ -4,6 +4,7 @@ import SectionTitle from '../components/SectionTitle';
 import { Grid, Row } from 'react-bootstrap';
 
 class ContactPageContainer extends React.Component {
+
     render(){
         return (
             <div>

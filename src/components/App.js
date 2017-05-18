@@ -15,7 +15,8 @@ function mapStateToProps(state){
         videos: state.videos,
         youtube: state.youtube,
         instagram: state.instagram,
-        youtubeUserId: state.youtubeUserId
+        youtubeUserId: state.youtubeUserId,
+        instagramUserId: state.instagramUserId
     }
 }
 

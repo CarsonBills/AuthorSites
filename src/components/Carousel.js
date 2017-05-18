@@ -1,27 +1,30 @@
 import React from 'react';
 import Slider from 'react-slick'
 
-class Carousel extends React.Component {
+class Carousel extends React.Component{
 
   render() {
     var settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      slidesToShow: this.props.slidesToShow,
+      slidesToScroll: this.props.slidesToScroll,
     };
-    return (
-      <div className='carousel'>
+    let carousel;
+    if (this.props.instagram){
+      console.log("afsd")
+      carousel = <div className='carousel'>
         <Slider {...settings}>
-          <div><h3 style={{color:"white"}}>1</h3></div>
-          <div><h3 style={{color:"white"}}>2</h3></div>
-          <div><h3 style={{color:"white"}}>3</h3></div>
-          <div><h3 style={{color:"white"}}>4</h3></div>
-          <div><h3 style={{color:"white"}}>5</h3></div>
-          <div><h3 style={{color:"white"}}>6</h3></div>
+          {this.props.instagram[0].data.map((picture, i) => <div key={i}><img src={picture.images.low_resolution.url}/></div>)}
         </Slider>
       </div>
+    } else {
+      carousel = null
+    }
+
+    return (
+      carousel
     );
   }
 }
