@@ -8,6 +8,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class Contacts extends React.Component {
     render(){
+
         return (
             <div>
                 <div className="photos-list" >
@@ -37,7 +38,7 @@ class Contacts extends React.Component {
                             </div>
                         </Row>
                         <Row className="show-grid ">
-                            {this.props.contact.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) }
+                            {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) : null }
                         </Row>
                     </Grid>
                 </div>

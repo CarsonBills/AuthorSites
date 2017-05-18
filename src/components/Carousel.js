@@ -13,7 +13,6 @@ class Carousel extends React.Component{
     };
     let carousel;
     if (this.props.instagram){
-      console.log("afsd")
       carousel = <div className='carousel'>
         <Slider {...settings}>
           {this.props.instagram[0].data.map((picture, i) => <div key={i}><img src={picture.images.low_resolution.url}/></div>)}

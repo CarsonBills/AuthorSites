@@ -5,12 +5,15 @@ import config from "../config";
 import store from '../store';
 
 class ContactContainer extends React.Component {
-
+    constructor(props){
+        super(props);
+        store.dispatch(this.props.fetchContactData(config.author));
+    }
     render(){
         return (
             <div>
                 <div className="page-content">
-                    <ContactsHome {...this.props}/>
+                    {this.props.contact ? <ContactsHome {...this.props}/> : null}
                 </div>
             </div>
         )

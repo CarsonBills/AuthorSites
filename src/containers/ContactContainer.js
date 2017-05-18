@@ -2,9 +2,14 @@ import React from 'react';
 import ContactsPage from '../components/ContactsPage';
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row } from 'react-bootstrap';
+import store from "../store";
+import config from "../config";
 
 class ContactPageContainer extends React.Component {
-
+    constructor(props){
+        super(props);
+        store.dispatch(this.props.fetchContactData(config.author));
+    }
     render(){
         return (
             <div>

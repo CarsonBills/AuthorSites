@@ -18,7 +18,6 @@ const youtube_user_id_url_2 = '&key=' + YOUTUBE_API_KEY
 
 export function fetchInstagram(user_id){
     const insta_request = axios.get(insta_url + user_id + insta_url_2)
-    console.log("1")
     return {
         type: "FETCH_INSTAGRAM",
         payload: insta_request
@@ -27,7 +26,6 @@ export function fetchInstagram(user_id){
 
 export function fetchInstagramUserID(username){
     const insta_user_id_request = axios.get(insta_user_id_url + username + insta_user_id_url_2)
-    console.log("2")
     return {
         type: "FETCH_INSTA_USER_ID",
         payload: insta_user_id_request
@@ -36,7 +34,6 @@ export function fetchInstagramUserID(username){
 
 export function fetchYoutube(user_id){
     const youtube_request = axios.get(youtube_url + user_id + youtube_url_2 )
-    console.log("3")
     return {
         type: "FETCH_YOUTUBE",
         payload: youtube_request
@@ -45,9 +42,17 @@ export function fetchYoutube(user_id){
 
 export function fetchYoutubeUserID(username){
     const yt_user_id_request = axios.get(youtube_user_id_url + username + youtube_user_id_url_2)
-console.log("4")
     return {
         type: "FETCH_YT_USER_ID",
         payload: yt_user_id_request
+    }
+}
+
+export function fetchContactData(author){
+    console.log("ACTION CREATOR", author)
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/contact/contacts')
+    return {
+        type: "FETCH_CONTACT_DATA",
+        payload: contact_request
     }
 }
