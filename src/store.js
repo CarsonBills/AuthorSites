@@ -8,10 +8,10 @@ import rootReducer from './reducers/index';
 
 // import fake data
 import books from './data/books';
-import articles from './data/articles';
-import about from './data/about';
-import contact from './data/contact';
-import events from './data/events';
+const articles = [];
+const about = [];
+const contact = [];
+const events = [];
 import home from './data/home';
 import siteConfig from './data/siteConfig';
 import videos from './data/videos';

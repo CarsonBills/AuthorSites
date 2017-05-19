@@ -11,7 +11,6 @@ class Videos extends React.Component {
     }
     componentWillMount() {
         store.dispatch(this.props.fetchYoutubeUserID(this.props.videos.channelName)).then(() => {
-            console.log("Midpoint", this.props)
             store.dispatch(this.props.fetchYoutube(this.props.youtubeUserId[0]));
         });
     }

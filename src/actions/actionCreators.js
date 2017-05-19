@@ -49,10 +49,25 @@ export function fetchYoutubeUserID(username){
 }
 
 export function fetchContactData(author){
-    console.log("ACTION CREATOR", author)
     const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/contact/contacts')
     return {
         type: "FETCH_CONTACT_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchAboutData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/about/about')
+    return {
+        type: "FETCH_ABOUT_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchArticlesData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/articles/articles')
+    return {
+        type: "FETCH_ARTICLES_DATA",
         payload: contact_request
     }
 }

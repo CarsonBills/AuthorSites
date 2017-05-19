@@ -13,20 +13,20 @@ class About extends React.Component {
                         <div>
                             <Col xs={12} md={6}>
                                 <div className="about-image" >
-                                    <img src={this.props.about.authorImageURL}/>
+                                    <img src={this.props.about[0].data.authorImageURL}/>
                                 </div>
                             </Col>
                             <Col xs={12} md={6}>
                                 <div>
                                     <div className="section-title"> 
-                                        <SectionTitle title={this.props.about.aboutPageText}/>
+                                        <SectionTitle title={this.props.about[0].data.aboutPageText}/>
                                     </div>
                                     <TextTruncate 
                                         className="about-description"
                                         line={3}
                                         truncateText="…"
-                                        text= {this.props.about.description}
-                                        textTruncateChild={<a href={this.props.about.link}>Read more</a>}
+                                        text= {this.props.about[0].data.description}
+                                        textTruncateChild={<a href={this.props.about[0].data.link}>Read more</a>}
                                     />
                                     <Subscribe title="true" {...this.props}/>
                                 </div>
