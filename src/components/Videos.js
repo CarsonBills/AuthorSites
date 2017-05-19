@@ -10,7 +10,7 @@ class Videos extends React.Component {
         super(props);
     }
     componentWillMount() {
-        store.dispatch(this.props.fetchYoutubeUserID(this.props.videos.channelName)).then(() => {
+        store.dispatch(this.props.fetchYoutubeUserID(this.props.videos[0].data.channelName)).then(() => {
             store.dispatch(this.props.fetchYoutube(this.props.youtubeUserId[0]));
         });
     }

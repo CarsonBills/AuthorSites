@@ -14,7 +14,7 @@ const contact = [];
 const events = [];
 import home from './data/home';
 import siteConfig from './data/siteConfig';
-import videos from './data/videos';
+const videos = [];
 
 //create an object fro default data
 

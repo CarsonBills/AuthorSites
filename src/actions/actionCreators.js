@@ -71,3 +71,19 @@ export function fetchArticlesData(author){
         payload: contact_request
     }
 }
+
+export function fetchEventsData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/events/events')
+    return {
+        type: "FETCH_EVENTS_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchVideosData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/videos/videos')
+    return {
+        type: "FETCH_VIDEOS_DATA",
+        payload: contact_request
+    }
+}
