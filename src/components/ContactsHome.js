@@ -8,7 +8,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class Contacts extends React.Component {
     render(){
-
         return (
             <div>
                 <div className="photos-list" >
@@ -34,7 +33,7 @@ class Contacts extends React.Component {
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title={this.props.contact.pageTitle} />
+                                {this.props.contact.length ? <SectionTitle title={this.props.contact[0].data.pageTitle} /> : null }
                             </div>
                         </Row>
                         <Row className="show-grid ">

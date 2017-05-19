@@ -38,7 +38,7 @@ const router = (
             <Route path="/books" component={BooksListContainer}></Route>
             <Route path="/events" component={EventsContainer}></Route>
             <Route path="/videos" component={VideosContainer}></Route>
-            <Route path="/contact" component={ContactContainer}></Route>
+            <Route path="/contacts" component={ContactContainer}></Route>
             <Route path="/books/:id" component={DetailContainer}></Route>
         </Route>
     </Router>

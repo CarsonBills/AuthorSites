@@ -13,7 +13,7 @@ class ContactContainer extends React.Component {
         return (
             <div>
                 <div className="page-content">
-                    {this.props.contact ? <ContactsHome {...this.props}/> : null}
+                    {this.props.contact && this.props.home ? <ContactsHome {...this.props}/> : null}
                 </div>
             </div>
         )

@@ -14,14 +14,14 @@ class ContactPageContainer extends React.Component {
         return (
             <div>
                 <div className="page-title bg-grey">
-                    <SectionTitle title={this.props.contact.pageTitle}/>
+                    {this.props.contact.length ? <SectionTitle title={this.props.contact[0].data.pageTitle}/> : null }
                 </div>
                 <div className="page-content">
                     <Grid>
                         <Row className="show-grid">
                             <div className="page-content">
-                                <div className="contacts-page" >
-                                    {this.props.contact.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />)}
+                                <div className="contacts-page">
+                                    {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) : null}
                                 </div>
                             </div>
                         </Row>
