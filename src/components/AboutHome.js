@@ -1,11 +1,21 @@
 import React from 'react';
 import TextTruncate from 'react-text-truncate'; 
+import HTMLTruncate from "react-truncate-html"
 import Subscribe from '../components/Subscribe';
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row, Col } from 'react-bootstrap';
 
+
+import LinesEllipsis from 'react-lines-ellipsis'
+import ReactHtmlParser from 'react-html-parser';
+const Entities = require('html-entities').AllHtmlEntities;
+const entities = new Entities();
+ 
+
 class About extends React.Component {
     render(){
+        const text = ReactHtmlParser(entities.decode(this.props.about[0].data.description))
+        console.log(text)
         return (
             <div className="about about-home">
                 <Grid>
@@ -21,13 +31,9 @@ class About extends React.Component {
                                     <div className="section-title"> 
                                         <SectionTitle title={this.props.about[0].data.aboutPageText}/>
                                     </div>
-                                    <TextTruncate 
-                                        className="about-description"
-                                        line={3}
-                                        truncateText="…"
-                                        text= {this.props.about[0].data.description}
-                                        textTruncateChild={<a href={this.props.about[0].data.link}>Read more</a>}
-                                    />
+                                    <div className="about-description">
+                                        <p>{ReactHtmlParser(entities.decode(this.props.about[0].data.description))}</p>
+                                    </div>
                                     <Subscribe title="true" {...this.props}/>
                                 </div>
                             </Col>

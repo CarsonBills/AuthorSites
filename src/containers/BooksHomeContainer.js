@@ -8,9 +8,9 @@ class BooksHomeContainer extends React.Component {
             <div>
                 <div className="page-content">
                     <div className="books-home">
-                        {this.props.books.map((book, i) => <BooksHome {...this.props} key={i} i={i} book={book} />)}
+                        {this.props.booksData.length ? this.props.booksData[0].data.books.map((book, i) => <BooksHome {...this.props} key={i} i={i} book={book} />) : null}
                     </div>
-                    <Button text="See All Books" link="/books" type="see-all"/>
+                    {this.props.books.length ? <Button text="See All Books" link={this.props.books[0].data.link} type="see-all"/> : null }
                 </div>
             </div>
         )

@@ -10,7 +10,6 @@ class AboutContainer extends React.Component {
         store.dispatch(this.props.fetchAboutData(config.author));
     }
     render(){
-        console.log(this.props)
         return (
             <div>
                 <div className="page-title bg-grey">

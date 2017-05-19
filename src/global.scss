@@ -368,6 +368,12 @@ h2 {
                     }
                     .detail-description {
                         margin-bottom: 50px;
+                        max-height: 300px;
+                        display: -webkit-box;
+                       -webkit-line-clamp: 3;
+                       -webkit-box-orient: vertical;
+                       overflow: hidden;
+                       text-overflow: ellipsis;
                     }
                 }
             }
@@ -432,6 +438,11 @@ h2 {
             }
             .about-description {
                 padding-top: 40px;
+                display: -webkit-box;
+                  -webkit-line-clamp: 4;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
             }
         }
     }
@@ -532,7 +543,7 @@ h2 {
     padding: 40px;
     .slick-slider {
         .slick-prev, .slick-next {
-            top: 278%;
+
         }
     }
     .slick-dots {

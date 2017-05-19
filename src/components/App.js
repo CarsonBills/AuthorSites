@@ -6,6 +6,7 @@ import Main from "./Main";
 function mapStateToProps(state){
     return {
         books: state.books,
+        booksData: state.booksData,
         articles: state.articles,
         about: state.about,
         contact: state.contact,

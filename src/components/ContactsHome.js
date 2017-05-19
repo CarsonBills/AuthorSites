@@ -14,12 +14,12 @@ class Contacts extends React.Component {
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title={this.props.home.photos.photosTitle} />
+                                <SectionTitle title={this.props.home[0].data.photos.photosTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subtitle icon="fa fa-instagram" subtitle={this.props.home.photos.photosSubTitle} />
+                                <Subtitle icon="fa fa-instagram" subtitle={this.props.home[0].data.photos.photosSubTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
@@ -45,12 +45,12 @@ class Contacts extends React.Component {
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
-                                <SectionTitle title={this.props.home.newsletter.sectionTitle} />
+                                <SectionTitle title={this.props.home[0].data.newsletter.sectionTitle} />
                             </div>
                         </Row>
                         <Row className="show-grid ">
                             <div>
-                                <Subtitle subtitle={this.props.home.newsletter.subtitle}/>
+                                <Subtitle subtitle={this.props.home[0].data.newsletter.subtitle}/>
                             </div>
                         </Row>
                         <Row className="show-grid ">

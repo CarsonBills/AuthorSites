@@ -11,7 +11,7 @@ class Review extends React.Component{
             <Col xs={12} md={6}>
                 <div className="review">
                     <p className="review-text">{this.props.review.text}</p>
-                    <p className="review-author">{this.props.review.author}</p>
+                    <p className="review-author">{this.props.review.reviewBy}</p>
                     <p className="review-publication">{this.props.review.publication}</p>
                 </div>
             </Col>;
@@ -19,7 +19,7 @@ class Review extends React.Component{
             review = <Col xs={12} md={12}>
                 <div className="review">
                     <p className="review-text">{this.props.review.text}</p>
-                    <p className="review-author">{this.props.review.author}</p>
+                    <p className="review-author">{this.props.review.reviewBy}</p>
                     <p className="review-publication">{this.props.review.publication}</p>
                 </div>
             </Col>

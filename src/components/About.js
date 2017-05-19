@@ -5,7 +5,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class About extends React.Component {
     render(){
-        console.log("ABOUT", this.props)
         return (
             <div className="about about-page">
                 <Grid>

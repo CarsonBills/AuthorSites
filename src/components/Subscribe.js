@@ -37,49 +37,50 @@ class Subscribe extends Component {
   }
 
   render() {
+
     let form;
 
     if (this.props.title){
       form = (
         <FormGroup onSubmit={this.onSubmit}>
-          <p>{this.props.siteConfig.newsletter.signUpTitleText}</p>
+          {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.newsletter.signUpTitleText}</p>  : null }
           <InputGroup>
-            <div className="Email">
+             {this.props.siteConfig.length ? <div className="Email">
               <input
                 ref='email'
                 type='text'
                 className='form-control'
-                placeholder={this.props.siteConfig.newsletter.signUpPlaceholder}
+                placeholder={this.props.siteConfig[0].data.newsletter.signUpPlaceholder}
                 onBlur={this.props.handleValidation('email')}
               />
               {this.props.getValidationMessages('email')}
-            </div>
+            </div> : null}
             <InputGroup.Button>
-              <div onClick={this.onSubmit} className="button" >{this.props.siteConfig.newsletter.signUpButtonText}</div>
+              {this.props.siteConfig.length ? <div onClick={this.onSubmit} className="button" >{this.props.siteConfig[0].data.newsletter.signUpButtonText}</div> : null }
             </InputGroup.Button>
           </InputGroup>
-        </FormGroup>
+        </FormGroup>  
       )
     } else {
 
       form = (
         <FormGroup onSubmit={this.onSubmit}>
           <InputGroup>
-            <div className="Email">
+            {this.props.siteConfig.length ? <div className="Email">
               <input
                 ref='email'
                 type='text'
                 className='form-control'
-                placeholder={this.props.siteConfig.newsletter.signUpPlaceholder}
+                placeholder={this.props.siteConfig[0].data.newsletter.signUpPlaceholder}
                 onBlur={this.props.handleValidation('email')}
               />
               {this.props.getValidationMessages('email')}
-            </div>
+            </div> : null }
             <InputGroup.Button>
-              <div onClick={this.onSubmit} className="button" >{this.props.siteConfig.newsletter.signUpButtonText}</div>
+              {this.props.siteConfig.length ? <div onClick={this.onSubmit} className="button" >{this.props.siteConfig[0].data.newsletter.signUpButtonText}</div> : null }
             </InputGroup.Button>
-          </InputGroup>
-        </FormGroup>
+          </InputGroup> 
+        </FormGroup>  
       )
     }
 
@@ -108,10 +109,9 @@ class Subscribe extends Component {
     const onValidate = (error) => {
       if (error) {
         //form has errors; do not submit
-        console.log("MANY ERRORS")
       } else {
         //no errors; submit form
-        console.log("NO ERRORS")
+        this.props.newsletterSubscribe(this.refs.email.value,  this.props.siteConfig[0].data.newsletter.campaignMonitorID)
       }
     };
     this.props.validate(onValidate);

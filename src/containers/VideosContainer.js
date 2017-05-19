@@ -10,7 +10,6 @@ class VideosContainer extends React.Component{
         store.dispatch(this.props.fetchVideosData(config.author));
     }
     render(){
-        console.log("VIDEOS", this.props)
         return (
             <div className="videos-list">
                 <div className="page-title">

@@ -4,6 +4,8 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import Mask from "../components/Mask";
 import Panel from "../components/Panel";
 import Footer from "../components/Footer";
+import config from "../config";
+import store from '../store';
 
 class Main extends React.Component {
     constructor(props) {
@@ -13,6 +15,7 @@ class Main extends React.Component {
         }
         this.barsClick = this.barsClick.bind(this);
         this.maskClick = this.maskClick.bind(this);
+        store.dispatch(this.props.fetchSiteConfigData(config.author));
     }
     barsClick(){
         this.setState({panelActive: true})
@@ -31,16 +34,16 @@ class Main extends React.Component {
                                 <Col xs={12} sm={12} lg={9} md={9}>
                                     <div className="nav">
                                         <ul>
-                                            <li><Link to='/'><span className="home"><span className="first">{this.props.siteConfig.authorFirstName}</span> <span className="second">{this.props.siteConfig.authorLastName}</span></span></Link></li>
-                                            {this.props.siteConfig.header.map((link, i) => <li key={i}><Link to={link.title}>{link.title}</Link></li>)}
+                                            {this.props.siteConfig.length ? <li><Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link></li> : null }
+                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.header.map((link, i) => <li key={i}><Link to={link.title}>{link.title}</Link></li>) : null}
                                         </ul>
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={12} lg={2} md={3}  lgOffset={1} mdOffset={0} >
                                     <div className="social">
-                                        <p>{this.props.siteConfig.social.socialLinksTitle}</p>
+                                        {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                                         <ul>
-                                            {this.props.siteConfig.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>)}
+                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>) : null }
                                         </ul>
                                     </div>
                                 </Col>
@@ -49,14 +52,14 @@ class Main extends React.Component {
                                 <Col xs={12} sm={12} lg={8} md={9}>
                                     <div className="nav">
                                         <i className="fa fa-bars" aria-hidden="true" onClick={this.barsClick}></i>
-                                        <Link to='/'><span className="home"><span className="first">{this.props.siteConfig.authorFirstName}</span> <span className="second">{this.props.siteConfig.authorLastName}</span></span></Link>
+                                       {this.props.siteConfig.length ? <Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link> : null }
                                     </div>
                                 </Col>
                                 <Col xs={12} sm={3} lg={3} md={3}  lgOffset={1} mdOffset={0} sm={12}>
                                     <div className="social">
-                                        <p>{this.props.siteConfig.social.socialLinksTitle}</p>
+                                        {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                                         <ul>
-                                            {this.props.siteConfig.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>)}
+                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>) : null }
                                         </ul>
                                     </div>
                                 </Col>

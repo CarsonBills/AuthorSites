@@ -7,13 +7,14 @@ import ReduxPromise from "redux-promise";
 import rootReducer from './reducers/index';
 
 // import fake data
-import books from './data/books';
+const books = [];
+const booksData = [];
 const articles = [];
 const about = [];
 const contact = [];
 const events = [];
-import home from './data/home';
-import siteConfig from './data/siteConfig';
+const home = [];
+const siteConfig = [];
 const videos = [];
 
 //create an object fro default data

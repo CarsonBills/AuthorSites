@@ -87,3 +87,48 @@ export function fetchVideosData(author){
         payload: contact_request
     }
 }
+
+export function fetchHomeData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/home/Home')
+    return {
+        type: "FETCH_HOME_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchSiteConfigData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/siteConfig')
+    return {
+        type: "FETCH_SITE_CONFIG_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchBooksPageData(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/bookspage/books')
+    return {
+        type: "FETCH_BOOKS_DATA",
+        payload: contact_request
+    }
+}
+
+export function fetchBookDetails(author){
+    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/books')
+    return {
+        type: "FETCH_BOOK_DETAIL_DATA",
+        payload: contact_request
+    }
+}
+
+export function newsletterSubscribe(user, listId){
+    const config = {
+       headers: {
+             'Content-Type': 'application/x-www-form-urlencoded'
+       }
+    };
+    const contact_request = axios.post('https://services.wwnorton.com/campmon/adduser', {'email': user, lists: [{'listId' : listId, "optIn": "true"}]}, config)
+    return {
+        type: "SUBSCRIBE",
+        payload: contact_request
+    }
+}

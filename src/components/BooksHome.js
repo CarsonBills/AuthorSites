@@ -4,6 +4,9 @@ import SectionTitle from '../components/SectionTitle';
 import Button from "../components/Button";
 import TextTruncate from 'react-text-truncate'; 
 import { Grid, Row, Col } from 'react-bootstrap';
+import ReactHtmlParser from 'react-html-parser';
+const Entities = require('html-entities').AllHtmlEntities;
+const entities = new Entities();
 
 class BooksHome extends React.Component {
     render(){
@@ -21,7 +24,7 @@ class BooksHome extends React.Component {
                                     className="detail-description"
                                     line={3}
                                     truncateText="…"
-                                    text={this.props.book.summary}
+                                    text={ReactHtmlParser(entities.decode(this.props.book.summary))}
                                     textTruncateChild={<a href={link}>Read more</a>}
                                     />
                                 <Button dropDownLinks={this.props.book.retailersLinks} text={this.props.book.orderButtonText} link="#" type="buy"/>

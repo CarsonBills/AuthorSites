@@ -10,7 +10,6 @@ class EventsContainer extends React.Component {
         store.dispatch(this.props.fetchEventsData(config.author));
     }
     render(){
-        console.log("EVENTS", this.props)
         return (
             <div className="events">
                 <div className="page-title">

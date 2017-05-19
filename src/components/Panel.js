@@ -12,15 +12,15 @@ class Panel extends React.Component {
         return (
             <div className={this.props.isActive ? 'flying-panel move' : 'flying-panel'} >
                 <div className="title">
-                    <Link to='/'><span className="home"><span className="first">{this.props.siteConfig.authorFirstName}</span> <span className="second">{this.props.siteConfig.authorLastName}</span></span></Link>
+                    {this.props.siteConfig.length ? <Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link> : null }
                 </div>
                 <div className="nav">
-                    {this.props.siteConfig.header.map((link, i) => <li key={i}><Link to={link.title}>{link.title}</Link></li>)}
+                   {this.props.siteConfig.length ? this.props.siteConfig[0].data.header.map((link, i) => <li key={i}><Link to={link.title}>{link.title}</Link></li>) : null}
                 </div>
                 <div className="social">
-                    <p>{this.props.siteConfig.social.socialLinksTitle}</p>
+                    {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                     <ul>
-                        {this.props.siteConfig.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>)}
+                       {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>) : null }
                     </ul>
                 </div>
             </div>

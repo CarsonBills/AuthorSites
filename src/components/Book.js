@@ -29,12 +29,10 @@ class Book extends React.Component {
                 </Col>
             )
         } else {
-            book = (
-               
-                    <div className="book" onClick={gaClick.bind(this)}>
-                        <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
-                    </div>
-                
+            book = (               
+                <div className="book" onClick={gaClick.bind(this)}>
+                    <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
+                </div>
             )
         }
         return (

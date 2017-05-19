@@ -5,8 +5,16 @@ import EventsContainer from './EventsContainer';
 import VideosContainer from './VideosContainer';
 import ContactHomeContainer from './ContactHomeContainer';
 import Carousel from "../components/Carousel";
+import config from "../config";
+import store from '../store';
 
 class Home extends React.Component{
+    constructor(props){
+        super(props);
+        store.dispatch(this.props.fetchHomeData(config.author));
+        store.dispatch(this.props.fetchBookDetails(config.author));
+        store.dispatch(this.props.fetchBooksPageData(config.author));
+    }
     render(){
         return (
             <div className="homepage">

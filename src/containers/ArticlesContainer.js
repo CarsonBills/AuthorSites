@@ -42,7 +42,6 @@ class ArticlesContainer extends React.Component {
     }
 
     render() {
-        console.log("ARTICLES", this.props, this.state)
         return (
             <div>
                 <div className="page-title bg-grey">

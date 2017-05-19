@@ -8,21 +8,22 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class Details extends React.Component {
     render(){
-        console.log("DETAILS!!!", this.props)
-        const link = "/books/"+this.props.book.url;
+        const i = this.props.booksData[0].data.books.findIndex((book) => book.url === this.props.params.id);
+        const book = this.props.booksData[0].data.books[i];
+        const link = "/books/"+book.url;
         return (
             <div className="book-detail">
                 <div className="detail-data">
                     <Grid>
                         <Row className="show-grid ">
                             <div>
-                                <BookCover dropDownLinks={this.props.book.retailersLinks} buttonText={this.props.book.orderButtonText} link={link} />
+                                <BookCover dropDownLinks={book.retailersLinks} buttonText={book.orderButtonText} link={link} />
                                 <Col xs={12} md={6}>
                                     <div className="detail-title-description">
                                         <div className="section-title"> 
-                                            <SectionTitle title={this.props.book.bookTitle} subtitle={this.props.book.subtitle}/>
+                                            <SectionTitle title={book.bookTitle} subtitle={book.subtitle}/>
                                         </div>
-                                        <DetailDescription description={this.props.book.summary}/>
+                                        <DetailDescription description={book.summary}/>
                                     </div>
                                 </Col>
                             </div>
@@ -33,9 +34,9 @@ class Details extends React.Component {
                     <Grid>
                         <Row className="show-grid">
                             <div className="section-title"> 
-                                <SectionTitle title={this.props.book.reviewSection.sectionTitle}/>
+                                <SectionTitle title={book.reviews.sectionTitle}/>
                             </div>
-                                <Reviews reviews={this.props.book.reviewSection.reviews} />
+                                <Reviews reviews={book.reviews.reviews} />
                         </Row>
                     </Grid>
                 </div>
