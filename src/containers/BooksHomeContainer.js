@@ -8,7 +8,7 @@ class BooksHomeContainer extends React.Component {
             <div>
                 <div className="page-content">
                     <div className="books-home">
-                        {this.props.booksData.length ? this.props.booksData[0].data.books.map((book, i) => <BooksHome {...this.props} key={i} i={i} book={book} />) : null}
+                        {this.props.booksData.length && this.props.home.length ? this.props.home[0].data.featuredBooks.map((book, i) => <BooksHome {...this.props} key={i} i={i} book={book} id={book.id}/>) : null}
                     </div>
                     {this.props.books.length ? <Button text="See All Books" link={this.props.books[0].data.link} type="see-all"/> : null }
                 </div>

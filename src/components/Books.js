@@ -7,7 +7,7 @@ class Books extends React.Component {
         const link = "/books/"+this.props.book.url;
         return (
             <div className="book-list">
-                <BookCover title={this.props.book.bookTitle} link= {link}/>
+                <BookCover book={this.props.book} title={this.props.book.bookTitle} link= {link}/>
             </div>
         )
     }

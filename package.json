@@ -15,7 +15,7 @@
     "react-lines-ellipsis": "^0.5.8",
     "react-modal": "^1.7.3",
     "react-redux": "^5.0.4",
-    "react-router": "^2.0.0",
+    "react-router": "^2.8.1",
     "react-router-redux": "4.0.8",
     "react-slick": "^0.14.8",
     "react-text-truncate": "^0.8.3",

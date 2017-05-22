@@ -10,7 +10,13 @@ const entities = new Entities();
 
 class BooksHome extends React.Component {
     render(){
-        let link = "/books/"+this.props.book.url;
+        let testBook
+        for (var x = 0; x < this.props.booksData[0].data.books.length; x++){
+            if (this.props.booksData[0].data.books[x]._doc === this.props.id){
+                testBook = this.props.booksData[0].data.books[x]
+            } 
+        }
+        let link = "/books/"+testBook.url;
         return (
             <Grid>
                 <Row className="show-grid">
@@ -18,21 +24,21 @@ class BooksHome extends React.Component {
                         <Col xs={12} md={6}>
                             <div className="books-home-text">
                                 <div className="section-title"> 
-                                    <SectionTitle title={this.props.book.bookTitle} subtitle={this.props.book.subtitle}/>
+                                    <SectionTitle title={testBook.bookTitle} subtitle={testBook.subtitle}/>
                                 </div>
                                 <TextTruncate 
                                     className="detail-description"
                                     line={3}
                                     truncateText="…"
-                                    text={ReactHtmlParser(entities.decode(this.props.book.summary))}
+                                    text={ReactHtmlParser(entities.decode(testBook.summary))}
                                     textTruncateChild={<a href={link}>Read more</a>}
                                     />
-                                <Button dropDownLinks={this.props.book.retailersLinks} text={this.props.book.orderButtonText} link="#" type="buy"/>
+                                <Button dropDownLinks={testBook.retailersLinks} text={testBook.orderButtonText} link="#" type="buy"/>
                             </div>
                         </Col>
                         <Col xs={12} md={6}>
                             <div className="books-home-cover">
-                                <BookCover link={link}/>
+                                <BookCover book={testBook} link={link}/>
                             </div>
                         </Col>
                     </div>

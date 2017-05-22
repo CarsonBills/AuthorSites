@@ -13,7 +13,7 @@ class ContactContainer extends React.Component {
         return (
             <div>
                 <div className="page-content">
-                    {this.props.contact.length && this.props.home.length ? <ContactsHome {...this.props}/> : null}
+                    {this.props.contact.length && this.props.home.length && this.props.contact[0].data.pageTitle && this.props.home[0].data.photos ? <ContactsHome {...this.props}/> : null}
                 </div>
             </div>
         )

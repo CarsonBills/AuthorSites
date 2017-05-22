@@ -307,6 +307,9 @@ h2 {
             p {
                 margin-top: 40px;
             }
+            img {
+                width: 238px;
+            }
         }
     }
     .detail-data {
@@ -321,6 +324,9 @@ h2 {
         .book {
             text-align: center;
             padding-right: 50px;
+            img {
+                width: 300px;
+            }
         }
         .detail-description {
             width:540px;
@@ -359,6 +365,9 @@ h2 {
                 .books-home-cover {
                     .book {
                         text-align: center;
+                        img {
+                            width: 300px;
+                        }
                     }
                 }    
                 .books-home-text {

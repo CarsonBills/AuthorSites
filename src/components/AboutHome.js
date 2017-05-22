@@ -15,7 +15,6 @@ const entities = new Entities();
 class About extends React.Component {
     render(){
         const text = ReactHtmlParser(entities.decode(this.props.about[0].data.description))
-        console.log(text)
         return (
             <div className="about about-home">
                 <Grid>

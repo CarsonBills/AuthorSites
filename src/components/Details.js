@@ -17,7 +17,7 @@ class Details extends React.Component {
                     <Grid>
                         <Row className="show-grid ">
                             <div>
-                                <BookCover dropDownLinks={book.retailersLinks} buttonText={book.orderButtonText} link={link} />
+                                <BookCover book={book} dropDownLinks={book.retailersLinks} buttonText={book.orderButtonText} link={link} />
                                 <Col xs={12} md={6}>
                                     <div className="detail-title-description">
                                         <div className="section-title"> 

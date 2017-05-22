@@ -1,5 +1,8 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import ReactHtmlParser from 'react-html-parser';
+const Entities = require('html-entities').AllHtmlEntities;
+const entities = new Entities();
 
 class Review extends React.Component{
 
@@ -10,17 +13,17 @@ class Review extends React.Component{
             review = 
             <Col xs={12} md={6}>
                 <div className="review">
-                    <p className="review-text">{this.props.review.text}</p>
-                    <p className="review-author">{this.props.review.reviewBy}</p>
-                    <p className="review-publication">{this.props.review.publication}</p>
+                    <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
+                    <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p>
+                    <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p>
                 </div>
             </Col>;
         } else {
             review = <Col xs={12} md={12}>
                 <div className="review">
-                    <p className="review-text">{this.props.review.text}</p>
-                    <p className="review-author">{this.props.review.reviewBy}</p>
-                    <p className="review-publication">{this.props.review.publication}</p>
+                    <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
+                    <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p>
+                    <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p>
                 </div>
             </Col>
         }

@@ -13,10 +13,10 @@ class EventsContainer extends React.Component {
         return (
             <div className="events">
                 <div className="page-title">
-                    {this.props.events.length ? <SectionTitle title={this.props.events[0].data.pageTitle} /> : null }
+                    {this.props.events.length && this.props.events[0].data.pageTitle ? <SectionTitle title={this.props.events[0].data.pageTitle} /> : null }
                 </div>
                 <div className="page-content">
-                    {this.props.events.length ? this.props.events[0].data.sections.map((event, i) => <Event {...this.props.events} key={i} i={i} event={event} />) : null }
+                    {this.props.events.length && this.props.events[0].data.sections ? this.props.events[0].data.sections.map((event, i) => <Event {...this.props.events} key={i} i={i} event={event} />) : null }
                 </div>
             </div>
         )

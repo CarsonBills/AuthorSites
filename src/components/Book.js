@@ -14,7 +14,7 @@ class Book extends React.Component {
             book = (
                 <Col xs={12} md={6} >
                     <div className="book" onClick={gaClick.bind(this)}>
-                        <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
+                        <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
                         <BookTitle title={this.props.title}/>
                     </div>
                 </Col>
@@ -23,7 +23,7 @@ class Book extends React.Component {
             book = (
                 <Col xs={12} md={6} >
                     <div className="book" onClick={gaClick.bind(this)}>
-                        <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
+                        <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
                         <Button dropDownLinks={this.props.dropDownLinks} text={this.props.buttonText} link="#" type="buy"/>
                     </div>
                 </Col>
@@ -31,7 +31,7 @@ class Book extends React.Component {
         } else {
             book = (               
                 <div className="book" onClick={gaClick.bind(this)}>
-                    <Link to={this.props.link}><img src="http://placehold.it/252x380"/></Link>
+                    <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
                 </div>
             )
         }
