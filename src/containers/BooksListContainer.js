@@ -8,9 +8,11 @@ import store from '../store';
 class BooksListContainer extends React.Component {
     constructor(props){
         super(props);
-        store.dispatch(this.props.fetchBooksPageData(config.author))
+        store.dispatch(this.props.fetchBookDetails(config.author));
+        store.dispatch(this.props.fetchBooksPageData(config.author));
     }
     render(){
+        console.log("BooksList", this.props.booksData)
         return (
             <div>
                 <div className="page-title bg-grey">

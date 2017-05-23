@@ -25,6 +25,9 @@ class Main extends React.Component {
     }
     render(){
         console.log("Main", this.props)
+        if (this.props.siteConfig.length) {
+            console.log("SOCIAL MEDIA", this.props.siteConfig[0].data.social.socialMediaLinks)
+        }
         return (
             <div>
                 <div>
@@ -43,7 +46,9 @@ class Main extends React.Component {
                                     <div className="social">
                                         {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                                         <ul>
-                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>) : null }
+                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i)  => {
+                                                var faName = config[link.type];
+                                                return  <li key={i}><Link target="_blank" to={link.url}><i className={faName} ></i></Link></li>} ) : null }
                                         </ul>
                                     </div>
                                 </Col>
@@ -59,7 +64,9 @@ class Main extends React.Component {
                                     <div className="social">
                                         {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                                         <ul>
-                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.icon} ></i></Link></li>) : null }
+                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i)  => {
+                                                var faName = config[link.type];
+                                                return  <li key={i}><Link target="_blank" to={link.url}><i className={faName} ></i></Link></li>} ) : null }
                                         </ul>
                                     </div>
                                 </Col>
