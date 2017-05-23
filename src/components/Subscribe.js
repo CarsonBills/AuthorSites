@@ -1,9 +1,7 @@
 import React from 'react';
-import {gaClick} from '../components/gaClick';
-import { Link } from 'react-router';
-import { FormGroup, InputGroup, FormControl, Col, Button } from 'react-bootstrap';
+import { FormGroup, InputGroup} from 'react-bootstrap';
 
-import {Component, PropTypes, getDOMNode} from 'react';
+import {Component, PropTypes} from 'react';
 import validation from 'react-validation-mixin';
 import strategy from 'react-validatorjs-strategy';
 import classnames from 'classnames';

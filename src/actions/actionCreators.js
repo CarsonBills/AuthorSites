@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from '../store';
+//import store from '../store';
 
 const INSTA_API_KEY =  process.env.REACT_APP_INSTAGRAM_TOKEN
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_TOKEN

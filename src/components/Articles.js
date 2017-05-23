@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../components/Button';
 import Article from "../components/Article";
 import Sort from "../components/Sort";
 import { Grid, Row } from 'react-bootstrap';

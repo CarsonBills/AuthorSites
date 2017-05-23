@@ -15,7 +15,7 @@ class Carousel extends React.Component{
     if (this.props.instagram){
       carousel = <div className='carousel'>
         <Slider {...settings}>
-          {this.props.instagram[0].data.map((picture, i) => <div key={i}><img src={picture.images.low_resolution.url}/></div>)}
+          {this.props.instagram[0].data.map((picture, i) => <div key={i}><img alt={"instagram" +{i}} src={picture.images.low_resolution.url}/></div>)}
         </Slider>
       </div>
     } else {

@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
 import { Col } from 'react-bootstrap';
 import Modal from 'react-modal';
-
-const appElement = document.getElementById('your-app-element');
 
 const customStyles = {
   overlay : {
@@ -61,7 +58,7 @@ class Video extends React.Component{
         return (
             <Col xs={12} md={4} >
                 <div className="video">
-                    <img className="video-thumb" onClick={this.openModal} src={thumbnail}/>
+                    <img alt={this.props.video.snippet.title} className="video-thumb" onClick={this.openModal} src={thumbnail}/>
                     <p>{this.props.video.snippet.title}</p>
                     <Modal
                       isOpen={this.state.modalIsOpen}

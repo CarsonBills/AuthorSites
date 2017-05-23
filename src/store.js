@@ -8,7 +8,7 @@ import rootReducer from './reducers/index';
 
 // import fake data
 const books = [];
-const booksData = [];
+//const booksData = [];
 const articles = [];
 const about = [];
 const contact = [];

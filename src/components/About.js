@@ -12,7 +12,7 @@ class About extends React.Component {
                         <div>
                             <Col xs={12} md={6}>
                                 <div className="about-image" >
-                                    {this.props.about ? <img src={this.props.about[0].data.authorImageURL}/> : null }
+                                    {this.props.about ? <img alt="Author" src={this.props.about[0].data.authorImageURL}/> : null }
                                 </div>
                             </Col>
                             <Col xs={12} md={6}>
