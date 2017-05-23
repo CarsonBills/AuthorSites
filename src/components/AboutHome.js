@@ -1,12 +1,7 @@
 import React from 'react';
-import TextTruncate from 'react-text-truncate'; 
-import HTMLTruncate from "react-truncate-html"
 import Subscribe from '../components/Subscribe';
 import SectionTitle from '../components/SectionTitle';
 import { Grid, Row, Col } from 'react-bootstrap';
-
-
-import LinesEllipsis from 'react-lines-ellipsis'
 import ReactHtmlParser from 'react-html-parser';
 const Entities = require('html-entities').AllHtmlEntities;
 const entities = new Entities();
@@ -14,7 +9,6 @@ const entities = new Entities();
 
 class About extends React.Component {
     render(){
-        const text = ReactHtmlParser(entities.decode(this.props.about[0].data.description))
         return (
             <div className="about about-home">
                 <Grid>
@@ -22,7 +16,7 @@ class About extends React.Component {
                         <div>
                             <Col xs={12} md={6}>
                                 <div className="about-image" >
-                                    <img src={this.props.about[0].data.authorImageURL}/>
+                                    <img alt="Author" src={this.props.about[0].data.authorImageURL}/>
                                 </div>
                             </Col>
                             <Col xs={12} md={6}>

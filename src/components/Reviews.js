@@ -1,6 +1,6 @@
 import React from 'react';
 import Review from "../components/Review";
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row} from 'react-bootstrap';
 
 class Reviews extends React.Component {
     render(){

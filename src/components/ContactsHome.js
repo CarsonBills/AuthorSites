@@ -4,7 +4,7 @@ import ContactsPage from "../components/ContactsPage";
 import Subscribe from "../components/Subscribe";
 import Subtitle from "../components/Subtitle";
 import Instagram from "../components/Instagram";
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row} from 'react-bootstrap';
 
 class Contacts extends React.Component {
     render(){

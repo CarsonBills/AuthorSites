@@ -1,14 +1,10 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
 import Youtube from "../components/Youtube";
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row} from 'react-bootstrap';
 import store from '../store';
 
 class Videos extends React.Component {
-    constructor(props){
-        super(props);
-    }
     componentWillMount() {
         store.dispatch(this.props.fetchYoutubeUserID(this.props.videos[0].data.channelName)).then(() => {
             store.dispatch(this.props.fetchYoutube(this.props.youtubeUserId[0]));

@@ -24,7 +24,6 @@ class Main extends React.Component {
         this.setState({panelActive: false})
     }
     render(){
-        console.log("Main", this.props)
         return (
             <div>
                 <div>
@@ -55,7 +54,7 @@ class Main extends React.Component {
                                        {this.props.siteConfig.length ? <Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link> : null }
                                     </div>
                                 </Col>
-                                <Col xs={12} sm={3} lg={3} md={3}  lgOffset={1} mdOffset={0} sm={12}>
+                                <Col xs={12} sm={3} lg={3} md={3}  lgOffset={1} mdOffset={0}>
                                     <div className="social">
                                         {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                                         <ul>

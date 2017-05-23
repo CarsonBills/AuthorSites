@@ -1,6 +1,5 @@
 import React from 'react';
 import BookCover from '../components/Book';
-import Button from "../components/Button";
 import DetailDescription from "../components/DetailDescription";
 import Reviews from "../components/Reviews";
 import SectionTitle from '../components/SectionTitle';

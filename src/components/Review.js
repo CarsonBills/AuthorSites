@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 import ReactHtmlParser from 'react-html-parser';
+import {Col} from 'react-bootstrap';
 const Entities = require('html-entities').AllHtmlEntities;
 const entities = new Entities();
 

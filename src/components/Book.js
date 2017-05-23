@@ -1,7 +1,6 @@
 import React from 'react';
 import BookTitle from '../components/BookTitle';
 import Button from "../components/Button";
-import ReactGA from 'react-ga';
 import {gaClick} from '../helpers/functions'
 import { Link } from 'react-router';
 import { Col } from 'react-bootstrap';
@@ -14,7 +13,7 @@ class Book extends React.Component {
             book = (
                 <Col xs={12} md={6} >
                     <div className="book" onClick={gaClick.bind(this)}>
-                        <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
+                        <Link to={this.props.link}><img alt={this.props.title} src={this.props.book.coverImage}/></Link>
                         <BookTitle title={this.props.title}/>
                     </div>
                 </Col>
@@ -23,7 +22,7 @@ class Book extends React.Component {
             book = (
                 <Col xs={12} md={6} >
                     <div className="book" onClick={gaClick.bind(this)}>
-                        <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
+                        <Link to={this.props.link}><img alt="Cover" src={this.props.book.coverImage}/></Link>
                         <Button dropDownLinks={this.props.dropDownLinks} text={this.props.buttonText} link="#" type="buy"/>
                     </div>
                 </Col>
@@ -31,7 +30,7 @@ class Book extends React.Component {
         } else {
             book = (               
                 <div className="book" onClick={gaClick.bind(this)}>
-                    <Link to={this.props.link}><img src={this.props.book.coverImage}/></Link>
+                    <Link to={this.props.link}><img alt="Cover" src={this.props.book.coverImage}/></Link>
                 </div>
             )
         }
