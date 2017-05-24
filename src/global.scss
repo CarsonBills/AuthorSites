@@ -404,7 +404,8 @@ h2 {
             top: -20px;
             .about-image {
                 img {
-                    width: 480px;
+                    width: 90%;
+                    max-width: 480px;
                 }
             }
 

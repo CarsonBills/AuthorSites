@@ -3,9 +3,10 @@ import Contact from "../components/Contact";
 
 class ContactsPage extends React.Component {
     render(){
+        console.log(this.props)
         return (
             <div>
-                <Contact title={this.props.contact.contactTitle} name={this.props.contact.contactName} email={this.props.contact.contactEmail}/>
+                <Contact numberOfContacts={this.props.numberOfContacts} title={this.props.contact.contactTitle} name={this.props.contact.contactName} email={this.props.contact.contactEmail}/>
             </div>
         )
     }

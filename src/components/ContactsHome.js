@@ -37,7 +37,7 @@ class Contacts extends React.Component {
                             </div>
                         </Row>
                         <Row className="show-grid ">
-                            {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) : null }
+                            {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => <ContactsPage numberOfContacts={this.props.contact[0].data.sections.length} key={i} i={i} contact={contact} />) : null }
                         </Row>
                     </Grid>
                 </div>

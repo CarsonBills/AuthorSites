@@ -21,7 +21,10 @@ class ContactPageContainer extends React.Component {
                         <Row className="show-grid">
                             <div className="page-content">
                                 <div className="contacts-page">
-                                    {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => <ContactsPage {...this.props.contact} key={i} i={i} contact={contact} />) : null}
+                                    {this.props.contact.length ? this.props.contact[0].data.sections.map((contact, i) => {
+
+                                        return <ContactsPage numberOfContacts={this.props.contact[0].data.sections.length} key={i} i={i} contact={contact} /> } ) : null}
+                                    
                                 </div>
                             </div>
                         </Row>
