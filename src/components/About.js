@@ -5,6 +5,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class About extends React.Component {
     render(){
+        console.log("ABout Home", this.props.about)
         return (
             <div className="about about-page">
                 <Grid>
@@ -18,7 +19,7 @@ class About extends React.Component {
                             <Col xs={12} md={6}>
                                 <div>
                                     {this.props.about ? <AboutDescription text={this.props.about[0].data.description} /> : null }
-                                    <Subscribe {...this.props}/>
+                                    <Subscribe title="true" {...this.props}/>
                                 </div>
                             </Col>
                         </div>

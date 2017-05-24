@@ -202,9 +202,12 @@ p.overline{
         background-color: #202127;
 
         .detail-description {
-            line-height: 50px;
+            line-height: 40px;
             font-size: 18px;
             color: #e0e0e0;
+        }
+        .read-more {
+            color: #41Ac9B;
         }
     }
     .detail-reviews{
@@ -232,9 +235,12 @@ p.overline{
             .row { 
                 .books-home-text {
                     .detail-description {
-                        line-height: 50px;
+                        line-height: 40px;
                         font-size: 18px;
                         color: #e0e0e0;
+                    }
+                    .read-more {
+                        color: #41Ac9B;
                     }
                 }
             }
@@ -243,9 +249,12 @@ p.overline{
     .about {
         .container {
             .about-description {
-                line-height: 50px;
+                line-height: 40px;
                 font-size: 18px;
                 color: #e0e0e0;
+            }
+            .read-more {
+                color: #41Ac9B;
             }
             .form-group{
                 font-size: 16px;

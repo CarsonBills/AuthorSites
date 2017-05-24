@@ -31,8 +31,8 @@ class BooksHome extends React.Component {
                                     line={3}
                                     truncateText="…"
                                     text={ReactHtmlParser(entities.decode(testBook.summary))}
-                                    textTruncateChild={<a href={link}>Read more</a>}
                                     />
+                                <a className="read-more" href={link}>Read More</a>
                                 <Button dropDownLinks={testBook.retailersLinks} text={testBook.orderButtonText} link="#" type="buy"/>
                             </div>
                         </Col>

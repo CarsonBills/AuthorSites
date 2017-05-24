@@ -11,13 +11,15 @@ class VideosContainer extends React.Component{
     }
     render(){
         return (
-            <div className="videos-list">
-                <div className="page-title">
-                    {this.props.videos.length && this.props.videos[0].data.pageTitle ? <SectionTitle title={this.props.videos[0].data.pageTitle} /> : null }
-                </div>
-                <div className="page-content">
-                    {this.props.videos.length && this.props.videos[0].data.sections ? <Videos videos={this.props.videos} {...this.props} /> : null }
-                </div>
+             <div>
+                {this.props.videos.length && this.props.videos[0].data.pageTitle ? <div className="videos-list">
+                    <div className="page-title">
+                        <SectionTitle title={this.props.videos[0].data.pageTitle} />
+                    </div>
+                    <div className="page-content">
+                        {this.props.videos[0].data.sections ? <Videos videos={this.props.videos} {...this.props} /> : null }
+                    </div>
+                </div> : null }
             </div>
         )
     }

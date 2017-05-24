@@ -14,16 +14,16 @@ class Review extends React.Component{
             <Col xs={12} md={6}>
                 <div className="review">
                     <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
-                    <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p>
-                    <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p>
+                    {this.props.review.reviewBy ? <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p> : null}
+                    {this.props.review.publication ? <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p> : null }
                 </div>
             </Col>;
         } else {
             review = <Col xs={12} md={12}>
                 <div className="review">
                     <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
-                    <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p>
-                    <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p>
+                    {this.props.review.reviewBy ? <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p> : null }
+                    {this.props.review.publication ? <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p> : null }
                 </div>
             </Col>
         }

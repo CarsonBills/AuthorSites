@@ -19,16 +19,18 @@ class Videos extends React.Component {
         }
         return (
             <div>
-                <div className="video-list" >
-                    <Grid>
-                        <Row className="show-grid ">
-                            <div className="videos-list">
-                                {this.props.youtube ? <Youtube {...this.props} numberOfVideos={number} /> : null }
-                            </div>
-                        </Row>
-                    </Grid>
-                </div>
-                    {number === '6' ? <Button link="/videos" text="See All Videos" type="see-all"/> : null}
+                {this.props.youtube ? <div>
+                    <div className="video-list" >
+                        <Grid>
+                            <Row className="show-grid ">
+                                <div className="videos-list">
+                                    <Youtube {...this.props} numberOfVideos={number} />
+                                </div>
+                            </Row>
+                        </Grid>
+                    </div>
+                        {number === '6' ? <Button link="/videos" text="See All Videos" type="see-all"/> : null}
+                </div> : null }
             </div>
         )
     }

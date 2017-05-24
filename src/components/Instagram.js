@@ -12,6 +12,7 @@ class Instagram extends React.Component {
         return (
             <div>
                  {this.props.instagram ? <Carousel
+                    typeCarousel={"instagram"}
                     slidesToShow={3}
                     sidesToScroll={3} 
                     {...this.props}

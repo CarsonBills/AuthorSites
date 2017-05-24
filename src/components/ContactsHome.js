@@ -10,7 +10,7 @@ class Contacts extends React.Component {
     render(){
         return (
             <div>
-                <div className="photos-list" >
+                { this.props.home[0].data.photos ? <div className="photos-list" >
                     <Grid>
                         <Row className="show-grid ">
                             <div className="page-title">
@@ -28,7 +28,7 @@ class Contacts extends React.Component {
                             </div>
                         </Row>
                     </Grid>
-                </div>
+                </div> : null }
                 <div className="contacts-list bg-grey" >
                     <Grid>
                         <Row className="show-grid ">

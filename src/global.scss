@@ -376,13 +376,16 @@ h2 {
                         text-align: left;
                     }
                     .detail-description {
-                        margin-bottom: 50px;
                         max-height: 300px;
                         display: -webkit-box;
-                       -webkit-line-clamp: 3;
+                       -webkit-line-clamp: 4;
                        -webkit-box-orient: vertical;
                        overflow: hidden;
                        text-overflow: ellipsis;
+                    }
+                    .read-more {
+                        text-decoration: none;
+                        font-size: 18px;
                     }
                 }
             }
@@ -404,11 +407,9 @@ h2 {
                     width: 480px;
                 }
             }
-            .about-description {
-                width:540px;
-                margin-bottom: 55px;
-            }
+
             .form-group{
+                margin-top: 35px;
                 margin-bottom: 170px;
                 .input-group {
                     color: #F84338;
@@ -445,13 +446,19 @@ h2 {
                 text-align: left;
                 padding-top: 100px;
             }
+
             .about-description {
-                padding-top: 40px;
+                width:540px;
+                max-height: 300px;
                 display: -webkit-box;
-                  -webkit-line-clamp: 4;
-                  -webkit-box-orient: vertical;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
+               -webkit-line-clamp: 4;
+               -webkit-box-orient: vertical;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+            .read-more {
+                text-decoration: none;
+                font-size: 18px;
             }
         }
     }
