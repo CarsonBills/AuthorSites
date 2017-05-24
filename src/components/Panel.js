@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import config from "../config";
 
 class Panel extends React.Component {
     constructor(props){
@@ -20,7 +21,9 @@ class Panel extends React.Component {
                 <div className="social">
                     {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
                     <ul>
-                       {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i) => <li key={i}><Link target="_blank" to={link.url}><i className={link.type} ></i></Link></li>) : null }
+                        {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i)  => {
+                            var faName = config[link.type];
+                            return  <li key={i}><Link target="_blank" to={link.url}><i className={faName} ></i></Link></li>} ) : null }
                     </ul>
                 </div>
             </div>
