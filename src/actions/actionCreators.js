@@ -1,5 +1,5 @@
 import axios from "axios";
-//import store from '../store';
+import config from '../config';
 
 const INSTA_API_KEY =  process.env.REACT_APP_INSTAGRAM_TOKEN
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_TOKEN
@@ -49,7 +49,7 @@ export function fetchYoutubeUserID(username){
 }
 
 export function fetchContactData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/contact/contact')
+    const contact_request = axios.get(config.serviceRoot + author + '/contact/contact')
     return {
         type: "FETCH_CONTACT_DATA",
         payload: contact_request
@@ -57,7 +57,7 @@ export function fetchContactData(author){
 }
 
 export function fetchAboutData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/about/about')
+    const contact_request = axios.get(config.serviceRoot + author + '/about/about')
     return {
         type: "FETCH_ABOUT_DATA",
         payload: contact_request
@@ -65,7 +65,7 @@ export function fetchAboutData(author){
 }
 
 export function fetchArticlesData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/articles/articles')
+    const contact_request = axios.get(config.serviceRoot + author + '/articles/articles')
     return {
         type: "FETCH_ARTICLES_DATA",
         payload: contact_request
@@ -73,7 +73,7 @@ export function fetchArticlesData(author){
 }
 
 export function fetchEventsData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/events/events')
+    const contact_request = axios.get(config.serviceRoot + author + '/events/events')
     return {
         type: "FETCH_EVENTS_DATA",
         payload: contact_request
@@ -81,7 +81,7 @@ export function fetchEventsData(author){
 }
 
 export function fetchVideosData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/videos/videos')
+    const contact_request = axios.get(config.serviceRoot + author + '/videos/videos')
     return {
         type: "FETCH_VIDEOS_DATA",
         payload: contact_request
@@ -89,7 +89,7 @@ export function fetchVideosData(author){
 }
 
 export function fetchHomeData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/home/Home')
+    const contact_request = axios.get(config.serviceRoot + author + '/home/Home')
     return {
         type: "FETCH_HOME_DATA",
         payload: contact_request
@@ -97,7 +97,7 @@ export function fetchHomeData(author){
 }
 
 export function fetchSiteConfigData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/siteConfig')
+    const contact_request = axios.get(config.serviceRoot + author + '/siteConfig')
     return {
         type: "FETCH_SITE_CONFIG_DATA",
         payload: contact_request
@@ -105,7 +105,7 @@ export function fetchSiteConfigData(author){
 }
 
 export function fetchBooksPageData(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/bookspage/books')
+    const contact_request = axios.get(config.serviceRoot + author + '/bookspage/books')
     return {
         type: "FETCH_BOOKS_DATA",
         payload: contact_request
@@ -113,7 +113,7 @@ export function fetchBooksPageData(author){
 }
 
 export function fetchBookDetails(author){
-    const contact_request = axios.get('https://stg-services.wwnorton.com/getCmsContent.php?url=/api/author/' + author + '/books')
+    const contact_request = axios.get(config.serviceRoot + author + '/books')
     return {
         type: "FETCH_BOOK_DETAIL_DATA",
         payload: contact_request
