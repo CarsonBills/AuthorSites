@@ -56,16 +56,6 @@ class Main extends React.Component {
                                        {this.props.siteConfig.length ? <Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link> : null }
                                     </div>
                                 </Col>
-                                <Col xs={12} sm={3} lg={3} md={3}  lgOffset={1} mdOffset={0}>
-                                    <div className="social">
-                                        {this.props.siteConfig.length ? <p>{this.props.siteConfig[0].data.social.socialLinksTitle}</p> : null }
-                                        <ul>
-                                            {this.props.siteConfig.length ? this.props.siteConfig[0].data.social.socialMediaLinks.map((link, i)  => {
-                                                var faName = config[link.type];
-                                                return  <li key={i}><Link target="_blank" to={link.url}><i className={faName} ></i></Link></li>} ) : null }
-                                        </ul>
-                                    </div>
-                                </Col>
                             </div>
                         </Row>
                     </Grid>
