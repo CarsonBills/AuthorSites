@@ -1,8 +1,8 @@
 import axios from "axios";
 import config from '../config';
 
-const INSTA_API_KEY =  process.env.REACT_APP_INSTAGRAM_TOKEN
-const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_TOKEN
+const INSTA_API_KEY =  config.instagramAPIKey
+const YOUTUBE_API_KEY = config.youtubeAPIKey
 
 const insta_user_id_url = 'https://crossorigin.me/https://api.instagram.com/v1/users/search?q=';
 const insta_user_id_url_2 = '&access_token=' + INSTA_API_KEY

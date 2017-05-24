@@ -25,12 +25,8 @@ class About extends React.Component {
                                     <div className="section-title"> 
                                         <SectionTitle title={this.props.about[0].data.aboutPageText}/>
                                     </div>
-                                    <TextTruncate 
-                                        className="about-description"
-                                        line={3}
-                                        truncateText="…"
-                                        text={ReactHtmlParser(entities.decode(this.props.about[0].data.description))}
-                                        />
+                                    <div className="about-description">{ReactHtmlParser(entities.decode(this.props.about[0].data.description))}</div>
+                                        
                                     <a className="read-more" href={this.props.about[0].data.link}>Read More</a>
                                     <Subscribe title="true" {...this.props}/>
                                 </div>

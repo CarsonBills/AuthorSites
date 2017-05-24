@@ -10,6 +10,7 @@ import EventsContainer from './containers/EventsContainer';
 import VideosContainer from './containers/VideosContainer';
 import ContactContainer from './containers/ContactContainer';
 import DetailContainer from './containers/DetailContainer';
+import config from './config';
 
 import { Router, Route, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
@@ -27,7 +28,7 @@ function logPageView() {
 
 
 import './global.css';
-import './cmessud.css';
+require(config.stylesheet);
 
 const router = (
   <Provider store={store}>
