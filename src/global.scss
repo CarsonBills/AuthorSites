@@ -96,7 +96,7 @@ h2 {
 .flying-panel {
     position: absolute;
     width: 270px;
-    height: 550px;
+    height: 450px;
     transform: translate(-270px);
     transition-duration: 250ms;
     z-index: 1000;
@@ -455,7 +455,6 @@ h2 {
                -webkit-line-clamp: 4;
                -webkit-box-orient: vertical;
                overflow: hidden;
-               text-overflow: ellipsis;
             }
             .read-more {
                 text-decoration: none;
@@ -619,6 +618,19 @@ h2 {
             a {
                 &:hover{
                     background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page-content {
+        .about {
+            .container {
+                top: 0;
+                .about-image {
+                    text-align: center;
                 }
             }
         }
