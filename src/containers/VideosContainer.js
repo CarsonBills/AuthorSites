@@ -17,7 +17,7 @@ class VideosContainer extends React.Component{
                         <SectionTitle title={this.props.videos[0].data.pageTitle} />
                     </div>
                     <div className="page-content">
-                        {this.props.videos[0].data.sections ? <Videos videos={this.props.videos} {...this.props} /> : null }
+                        {this.props.videos[0].data ? <Videos videos={this.props.videos} {...this.props} /> : null }
                     </div>
                 </div> : null }
             </div>

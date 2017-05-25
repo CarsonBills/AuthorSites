@@ -1,28 +1,30 @@
 import React from 'react';
-import {gaClick} from '../helpers/functions'
+import { gaClick } from '../helpers/functions'
 import { Link } from 'react-router';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 
 class Button extends React.Component {
 
-    render(){
+    render() {
         let button;
-        if (this.props.text === "Order Now"){
+        
+        if (this.props.type === "see-all") {
+            button = (
+                <Link to={this.props.link} onClick={() => { gaClick.handleClick() }}>
+                    <div className="see-all" >{this.props.text} <i className="fa fa-chevron-right" aria-hidden="true"></i></div>
+                </Link>
+            )
+        }
+        else {
             button = (
                 <DropdownButton className="button" title={this.props.text} id='dropdown-basic' >
-                    {this.props.dropDownLinks.map((link, i) => <MenuItem key={i}>{link.retailer}</MenuItem>)}
+                    {this.props.dropDownLinks.map((link, i) => <MenuItem href={link.link} key={i} target="_blank">{link.retailer}</MenuItem>)}
                 </DropdownButton>
-            )
-        } else if (this.props.type === "see-all") {
-            button = (
-                <Link to={this.props.link} onClick={()=>{gaClick.handleClick()}}>
-                    <div className="see-all" >{this.props.text} <i className="fa fa-chevron-right" aria-hidden="true"></i></div>
-                </Link>                 
             )
         }
         return (
             <div>
-                { button }
+                {button}
             </div>
         )
     }
