@@ -2,7 +2,6 @@ import React from 'react';
 import Details from '../components/Details';
 import config from "../config";
 import store from '../store';
-import ScrollToTop from './ScrollToTop';
 
 
 class DetailContainer extends React.Component {
