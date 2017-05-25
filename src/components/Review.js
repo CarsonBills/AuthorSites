@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
 import {Col} from 'react-bootstrap';
-const Entities = require('html-entities').AllHtmlEntities;
-const entities = new Entities();
+import { decodeForDisplay } from '../helpers/functions';
 
 class Review extends React.Component{
 
@@ -13,17 +11,17 @@ class Review extends React.Component{
             review = 
             <Col xs={12} md={6}>
                 <div className="review">
-                    <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
-                    {this.props.review.reviewBy ? <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p> : null}
-                    {this.props.review.publication ? <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p> : null }
+                    <p className="review-text">{decodeForDisplay(this.props.review.text)}</p>
+                    {this.props.review.reviewBy ? <p className="review-author">{decodeForDisplay(this.props.review.reviewBy)}</p> : null}
+                    {this.props.review.publication ? <p className="review-publication">{decodeForDisplay(this.props.review.publication)}</p> : null }
                 </div>
             </Col>;
         } else {
             review = <Col xs={12} md={12}>
                 <div className="review">
-                    <p className="review-text">{ReactHtmlParser(entities.decode(this.props.review.text))}</p>
-                    {this.props.review.reviewBy ? <p className="review-author">{ReactHtmlParser(entities.decode(this.props.review.reviewBy))}</p> : null }
-                    {this.props.review.publication ? <p className="review-publication">{ReactHtmlParser(entities.decode(this.props.review.publication))}</p> : null }
+                    <p className="review-text">{decodeForDisplay(this.props.review.text)}</p>
+                    {this.props.review.reviewBy ? <p className="review-author">{decodeForDisplay(this.props.review.reviewBy)}</p> : null }
+                    {this.props.review.publication ? <p className="review-publication">{decodeForDisplay(this.props.review.publication)}</p> : null }
                 </div>
             </Col>
         }

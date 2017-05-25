@@ -3,10 +3,7 @@ import Subscribe from '../components/Subscribe';
 import SectionTitle from '../components/SectionTitle';
 import TextTruncate from 'react-text-truncate'; 
 import { Grid, Row, Col } from 'react-bootstrap';
-import ReactHtmlParser from 'react-html-parser';
-const Entities = require('html-entities').AllHtmlEntities;
-const entities = new Entities();
- 
+import { decodeForDisplay } from '../helpers/functions'
 
 class About extends React.Component {
     render(){
@@ -25,7 +22,7 @@ class About extends React.Component {
                                     <div className="section-title"> 
                                         <SectionTitle title={this.props.about[0].data.aboutPageText}/>
                                     </div>
-                                    <div className="about-description">{ReactHtmlParser(entities.decode(this.props.about[0].data.description))}</div>
+                                    <div className="about-description">{decodeForDisplay(this.props.about[0].data.description)}</div>
                                         
                                     <a className="read-more" href={this.props.about[0].data.link}>Read More</a>
                                     <Subscribe title="true" {...this.props}/>

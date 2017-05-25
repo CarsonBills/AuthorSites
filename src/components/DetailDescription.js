@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
-const Entities = require('html-entities').AllHtmlEntities;
-const entities = new Entities();
-
+import { decodeForDisplay } from '../helpers/functions';
 
 class DetailDescription extends React.Component {
 
@@ -10,7 +7,7 @@ class DetailDescription extends React.Component {
         return (
             <div className="detail-description" >
                 <p>
-                     {ReactHtmlParser(entities.decode(this.props.description))}
+                     {decodeForDisplay(this.props.description)}
                 </p>
             </div>
         )
