@@ -36,10 +36,10 @@ class Main extends React.Component {
                                             {this.props.siteConfig.length ? <li><Link to='/'><span className="home"><span className="first">{this.props.siteConfig[0].data.authorFirstName}</span> <span className="second">{this.props.siteConfig[0].data.authorLastName}</span></span></Link></li> : null}
                                             {this.props.siteConfig.length ? this.props.siteConfig[0].data.header.map(
                                                 (link, i) => {
-                                                    if(link.title.toUpperCase()=== "HOME")
+                                                    if(link.title.trim().toUpperCase()=== "HOME")
                                                         return null;
                                                     else
-                                                        return <li key={i}><Link to={link.title}>{link.title}</Link></li>
+                                                        return <li key={i}><Link to={link.title.trim()}>{link.title.trim()}</Link></li>
                                                 })
                                                 : null}
                                         </ul>

@@ -81,7 +81,7 @@ export function fetchEventsData(author){
 }
 
 export function fetchVideosData(author){
-    const contact_request = axios.get(config.serviceRoot + author + '/videos/videos')
+    const contact_request = axios.get(config.serviceRoot + author + '/videos/video')
     return {
         type: "FETCH_VIDEOS_DATA",
         payload: contact_request

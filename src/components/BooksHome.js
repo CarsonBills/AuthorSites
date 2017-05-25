@@ -3,10 +3,8 @@ import BookCover from '../components/Book';
 import SectionTitle from '../components/SectionTitle';
 import Button from "../components/Button";
 import TextTruncate from 'react-text-truncate'; 
+import { decodeForDisplay } from '../helpers/functions';
 import { Grid, Row, Col } from 'react-bootstrap';
-import ReactHtmlParser from 'react-html-parser';
-const Entities = require('html-entities').AllHtmlEntities;
-const entities = new Entities();
 
 class BooksHome extends React.Component {
     render(){
@@ -30,7 +28,7 @@ class BooksHome extends React.Component {
                                     className="detail-description"
                                     line={3}
                                     truncateText="…"
-                                    text={ReactHtmlParser(entities.decode(testBook.summary))}
+                                    text={decodeForDisplay(testBook.summary)}
                                     />
                                 <a className="read-more" href={link}>Read More</a>
                                 <Button dropDownLinks={testBook.retailersLinks} text={testBook.orderButtonText} link="#" type="buy"/>

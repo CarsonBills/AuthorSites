@@ -5,18 +5,28 @@ import store from '../store';
 
 
 class DetailContainer extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         store.dispatch(this.props.fetchBookDetails(config.author));
     }
-    render(){
+    render() {
         return (
+
             <div>
                 <div className="page-content">
-                    {this.props.booksData.length ? <Details {...this.props} /> : null }
+                    {this.props.booksData.length ? <Details {...this.props} /> : null}
                 </div>
             </div>
+
         )
+    }
+
+    componentDidMount(prevProps) {
+        window.scrollTo(0, 0)
+    }
+    
+    componentDidUpdate(prevProps) {
+        window.scrollTo(0, 0)
     }
 }
 
