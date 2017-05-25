@@ -8,7 +8,7 @@ import rootReducer from './reducers/index';
 
 // import fake data
 const books = [];
-//const booksData = [];
+const booksData = [];
 const articles = [];
 const about = [];
 const contact = [];
@@ -38,5 +38,7 @@ const store = createStore(
 
 
 export const history = syncHistoryWithStore(browserHistory, store);
+
+console.log(browserHistory, history)
 
 export default store;

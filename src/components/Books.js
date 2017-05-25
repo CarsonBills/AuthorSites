@@ -1,5 +1,6 @@
 import React from 'react';
 import BookCover from '../components/Book';
+import { Row } from 'react-bootstrap';
 
 class Books extends React.Component {
     render(){

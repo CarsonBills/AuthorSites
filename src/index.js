@@ -25,10 +25,8 @@ function logPageView() {
   ReactGA.pageview(window.location.pathname);
 }
 
-
-
 import './global.css';
-require(config.stylesheet);
+import './cdoughty.css';
 
 const router = (
   <Provider store={store}>
